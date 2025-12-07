@@ -6,6 +6,7 @@ tailwind.config = {
                         'fpso-dark': '#003f88', // Deep Blue - Primary Nav
                         'fpso-accent': '#ffcc00', // Gold/Yellow - Accent/Buttons
                         'fpso-utility': '#f3f4f6', // Light Gray - Utility Bar
+                        'fpso-green': '#2C860B', // dark Green - Utility Bar
                     }
                 }
             }
@@ -350,10 +351,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // --- 2. Dynamic Data Placeholder (For a real system, this would come from an API) ---
             const memberData = {
-                name: "Aisha Kamau",
-                id: "MT2023/556",
-                uni: "University of Logistics",
-                level: "Degree (Year 2) / Procurement",
+                name: "Victor Lekule",
+                id: "MZA/BPLM/22/107505",
+                uni: "TIA MWANZA",
+                level: "Degree ",
                 regDate: "2024-01-15",
                 endDate: "2024-12-31" 
             };
