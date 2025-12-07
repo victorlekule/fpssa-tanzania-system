@@ -80,6 +80,7 @@
                     <a href="about.html" class="hover:text-fpso-accent py-3 flex items-center group">About Us <span class="ml-1 text-xs group-hover:text-fpso-accent"></span> </a>
                     <a href="services.html" class="hover:text-fpso-accent py-3 flex items-center group"> Our Services <span class="ml-1 text-xs group-hover:text-fpso-accent"></span>  </a>
                     <a href="gallery.html" class="hover:text-fpso-accent py-3">Gallery</a>
+                    <a href="club.html" class="hover:text-fpso-accent py-3">Club</a>
                     <a href="news.html" class="hover:text-fpso-accent py-3 flex items-center group">News & Update <span class="ml-1 text-xs group-hover:text-fpso-accent"></span>                  </a>
                     <a href="Job.html" class="hover:text-fpso-accent py-3 flex items-center group">Jobs <span class="ml-1 text-xs group-hover:text-fpso-accent"></span></a>
                     <a href="contact.html" class="hover:text-fpso-accent py-3">Contact Us</a>
@@ -95,12 +96,8 @@
                     </form>
 
                     <div class="space-x-3 hidden md:flex">
-                        <button id="reg-btn-desktop" class="px-4 py-2 bg-fpso-accent text-gray-900 font-semibold rounded-lg shadow-md hover:bg-yellow-400 transition duration-300">
-                            Register
-                        </button>
-                        <button id="login-btn-desktop" class="px-4 py-2 border bg-indigo-50 text-fpso-dark font-semibold rounded-lg hover:bg-indigo-50 transition duration-300">
-                            Login
-                        </button>
+                    <a href="registation.html" id="reg-btn-desktop" class="px-4 py-2 bg-fpso-accent text-gray-900 font-semibold rounded-lg shadow-md hover:bg-yellow-400 transition duration-300 inline-block">  Register </a>
+                        <a href="login.html" id="login-btn-desktop" class="px-4 py-2 border border-indigo-200 bg-indigo-50 text-fpso-dark font-semibold rounded-lg hover:bg-indigo-100 transition duration-300 inline-block"> Login </a>
                     </div>
                 </div>
 
@@ -119,6 +116,7 @@
                 <a href="about.html" class="block px-3 py-2 hover:bg-fpso-light/20 flex justify-between items-center">About Us <span class="text-fpso-accent"></span></a>
                 <a href="services.html" class="block px-3 py-2 hover:bg-fpso-light/20 flex justify-between items-center">Our Services <span class="text-fpso-accent"></span></a>
                 <a href="gallery.html" class="block px-3 py-2 hover:bg-fpso-light/20">Gallery</a>
+                <a href="club.html" class="block px-3 py-2 hover:bg-fpso-light/20">Club</a>
                 <a href="news.html" class="block px-3 py-2 hover:bg-fpso-light/20 flex justify-between items-center">News & Update<span class="text-fpso-accent"></span></a>
                 <a href="Job.html" class="block px-3 py-2 hover:bg-fpso-light/20 flex justify-between items-center">Jobs <span class="text-fpso-accent"></span></a>
                 <a href="contact.html" class="block px-3 py-2 hover:bg-fpso-light/20">Contact </a>
@@ -135,14 +133,29 @@
     <!-- Hero Section -->
     <section id="hero" class="relative h-screen md:h-[70vh] flex items-center justify-center">
 
-        <div class="absolute inset-0">
-            <img 
-                src="Picha/study-group-learning-library.jpg" 
-                alt="FPSSA background of students and procurement concepts" 
-                class="w-full h-full object-cover"
-            >
-            <div class="absolute inset-0 bg-gray-900 opacity-60"></div>
-        </div>
+        <div id="slideshow-container" class="absolute inset-0 z-0">
+        
+        <img 
+            src="Picha/picha ya pamoja.jpg" 
+            alt="FPSSA students together" 
+            class="slideshow-image absolute inset-0 w-full h-full object-cover opacity-100"
+        >
+        
+        <img 
+            src="Picha/1.jpeg" 
+            alt="Students at a seminar" 
+            class="slideshow-image absolute inset-0 w-full h-full object-cover opacity-0"
+        >
+        
+        <img 
+            src="Picha/2.jpeg" 
+            alt="Students networking" 
+            class="slideshow-image absolute inset-0 w-full h-full object-cover opacity-0"
+        >
+        
+        <div class="absolute inset-0 bg-gray-900 opacity-60"></div>
+    </div>
+
 
         <div class="container mx-auto px-6 relative z-10 text-white text-center py-20">
             
@@ -183,14 +196,20 @@
                         Federation of Procurement and Student Association (FPSSA)
                     </h2>
                     <p class="text-lg text-gray-600 mb-4">
-                        The FPSO is the leading body connecting students, educators, and industry leaders in the field of procurement and supply chain management across the continent. Our mission is to foster knowledge sharing, professional development, and ethical practices.
+                        The FPSSA is the leading body connecting students, educators, and industry leaders in the field of procurement and supply chain management across the continent. Our mission is to foster knowledge sharing, professional development, and ethical practices.
+                    </p>
+                     <p class="text-lg text-gray-600 mb-4">
+                        The FPSSA is the leading body connecting students, educators, and industry leaders in the field of procurement and supply chain management across the continent. Our mission is to foster knowledge sharing, professional development, and ethical practices.
+                    </p>
+                     <p class="text-lg text-gray-600 mb-4">
+                        The FPSSA is the leading body connecting students, educators, and industry leaders in the field of procurement and supply chain management across the continent. Our mission is to foster knowledge sharing, professional development, and ethical practices.
                     </p>
                     <a href="#contact" class="text-fpso-primary hover:text-indigo-800 font-semibold transition duration-300">
                         Read Our Full Mission &rarr;
                     </a>
                 </div>
                 <div class="lg:w-1/2">
-                    <img src="Picha/study-group-learning-library.jpg" alt="About FPSO" class="rounded-xl shadow-2xl w-full h-auto object-cover">
+                    <img src="Picha/arusha.jpeg" alt="About FPSO" class="rounded-xl shadow-2xl w-full h-auto object-cover">
                 </div>
             </div>
         </section>
@@ -269,10 +288,10 @@
                 <h2 class="text-3xl font-bold text-center text-fpso-dark  mb-12">Gallery: Moments of Excellence</h2>
                 
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <img src="Picha/study-group-learning-library.jpg" alt="Gallery 1" class="w-full h-32 md:h-48 object-cover rounded-lg shadow-md hover:opacity-75 transition duration-300">
-                    <img src="Picha/study-group-learning-library.jpg" alt="Gallery 2" class="w-full h-32 md:h-48 object-cover rounded-lg shadow-md hover:opacity-75 transition duration-300">
-                    <img src="Picha/study-group-learning-library.jpg" alt="Gallery 3" class="w-full h-32 md:h-48 object-cover rounded-lg shadow-md hover:opacity-75 transition duration-300">
-                    <img src="Picha/study-group-learning-library.jpg" alt="Gallery 4" class="w-full h-32 md:h-48 object-cover rounded-lg shadow-md hover:opacity-75 transition duration-300">
+                    <img src="Picha/4.jpeg" alt="Gallery 1" class="w-full h-32 md:h-48 object-cover rounded-lg shadow-md hover:opacity-75 transition duration-300">
+                    <img src="Picha/3.jpeg" alt="Gallery 2" class="w-full h-32 md:h-48 object-cover rounded-lg shadow-md hover:opacity-75 transition duration-300">
+                    <img src="Picha/2.jpeg" alt="Gallery 3" class="w-full h-32 md:h-48 object-cover rounded-lg shadow-md hover:opacity-75 transition duration-300">
+                    <img src="Picha/1.jpeg" alt="Gallery 4" class="w-full h-32 md:h-48 object-cover rounded-lg shadow-md hover:opacity-75 transition duration-300">
                 </div>
             </div>
         </section>

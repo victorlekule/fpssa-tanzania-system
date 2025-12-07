@@ -11,8 +11,7 @@ tailwind.config = {
             }
         }
 
-       
-  
+        // Mobile Menu Toggle
 
         
         const toggleBtn = document.getElementById('mobile-menu-toggle');
@@ -37,6 +36,31 @@ tailwind.config = {
                     body.classList.remove('overflow-hidden');
                 }
             });
+        });
+        
+        //home bacground image script//
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('.slideshow-image');
+            let currentIndex = 0;
+            const cycleTime = 2000; // 2000 milliseconds = 2 seconds
+
+            function cycleBackground() {
+                
+                // 1. Hide the current image (set opacity to 0)
+                images[currentIndex].classList.remove('opacity-100');
+                images[currentIndex].classList.add('opacity-0');
+
+                // 2. Calculate the next index
+                currentIndex = (currentIndex + 1) % images.length;
+                
+                // 3. Show the next image (set opacity to 100)
+                images[currentIndex].classList.remove('opacity-0');
+                images[currentIndex].classList.add('opacity-100');
+            }
+
+            // Start the automatic rotation
+            // The function runs every 'cycleTime' (2000ms)
+            setInterval(cycleBackground, cycleTime);
         });
     
 // Ensure the page content isn't hidden under the fixed header.
@@ -443,4 +467,88 @@ document.addEventListener('DOMContentLoaded', () => {
                     window.location.href = 'payment-success.html'; 
                 }, 2000); 
             });
+        });
+
+        //club script//
+       document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('club-search');
+            const clubCards = document.querySelectorAll('.club-card');
+            const noResults = document.getElementById('no-results');
+
+            const filterClubs = () => {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                let resultsCount = 0;
+
+                clubCards.forEach(card => {
+                    const location = card.getAttribute('data-location').toLowerCase();
+                    
+                    if (location.includes(searchTerm)) {
+                        card.classList.remove('hidden');
+                        resultsCount++;
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+
+                if (resultsCount === 0) {
+                    noResults.classList.remove('hidden');
+                } else {
+                    noResults.classList.add('hidden');
+                }
+            };
+
+            // Event listeners for search
+            searchInput.addEventListener('input', filterClubs);
+        });
+
+        //visity page//
+        document.addEventListener('DOMContentLoaded', () => {
+            const eventSearchInput = document.getElementById('event-search');
+            const clubEvents = document.querySelectorAll('.club-event');
+            const noEvents = document.getElementById('no-events');
+            const clubTitleElement = document.getElementById('club-title');
+            
+            // --- 1. Dynamic Club Title ---
+            const urlParams = new URLSearchParams(window.location.search);
+            const clubParam = urlParams.get('club');
+            
+            if (clubParam) {
+                // Simple function to capitalize the first letter of each word (e.g., "dar es salaam" -> "Dar Es Salaam")
+                const formatClubName = (str) => {
+                    return str.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+                };
+                
+                clubTitleElement.textContent = `Events for ${formatClubName(clubParam)}`;
+                document.title = `${formatClubName(clubParam)} Events - PSSO`;
+            } else {
+                 clubTitleElement.textContent = "Club Events (No Club Selected)";
+            }
+
+            // --- 2. Event Filtering Logic ---
+            const filterEvents = () => {
+                const searchTerm = eventSearchInput.value.toLowerCase().trim();
+                let resultsCount = 0;
+
+                clubEvents.forEach(eventDiv => {
+                    const keywords = eventDiv.getAttribute('data-keywords').toLowerCase();
+                    const title = eventDiv.querySelector('h3').textContent.toLowerCase();
+                    
+                    // Check if search term is in keywords or title
+                    if (keywords.includes(searchTerm) || title.includes(searchTerm)) {
+                        eventDiv.classList.remove('hidden');
+                        resultsCount++;
+                    } else {
+                        eventDiv.classList.add('hidden');
+                    }
+                });
+
+                if (resultsCount === 0) {
+                    noEvents.classList.remove('hidden');
+                } else {
+                    noEvents.classList.add('hidden');
+                }
+            };
+
+            // Event listeners for search
+            eventSearchInput.addEventListener('input', filterEvents);
         });
