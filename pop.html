@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPSSA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section class="py-12 md:py-16">
+        <div class="container mx-auto px-6 max-w-3xl">
+            
+            <div class="bg-white p-8 md:p-10 rounded-xl shadow-2xl border-t-4 border-psso-accent">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-2">Join the PSSO!</h2>
+                <p class="text-gray-600 mb-8">Fill out the form below to become an official member of the Procurement and Supplies Student Organization.</p>
+
+                <form id="registration-form" action="#" method="POST" class="space-y-6">
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="full_name" class="block text-sm font-medium text-gray-700">Full Name *</label>
+                            <input type="text" id="full_name" name="full_name" required
+                                   class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-psso-primary focus:border-psso-primary">
+                        </div>
+                        <div>
+                            <label for="phone_number" class="block text-sm font-medium text-gray-700">Phone Number *</label>
+                            <input type="tel" id="phone_number" name="phone_number" required
+                                   class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-psso-primary focus:border-psso-primary">
+                        </div>
+                        <div>
+                            <label for="id_number" class="block text-sm font-medium text-gray-700">Student ID/Matriculation Number *</label>
+                            <input type="text" id="id_number" name="id_number" required
+                                   class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-psso-primary focus:border-psso-primary">
+                        </div>
+                        <div>
+                            <label for="nationality" class="block text-sm font-medium text-gray-700">Nationality *</label>
+                            <select id="nationality" name="nationality" required
+                                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-psso-primary focus:border-psso-primary bg-white">
+                                <option value="" disabled selected>Select your Nationality</option>
+                                <option value="TZ">Tanzanian</option>
+                                <option value="KE">Kenyan</option>
+                                <option value="UG">Ugandan</option>
+                                <option value="RW">Rwandan</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <hr class="border-gray-200">
+
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Academic Information</h3>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="university" class="block text-sm font-medium text-gray-700">University / College *</label>
+                            <select id="university" name="university" required
+                                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-psso-primary focus:border-psso-primary bg-white">
+                                <option value="" disabled selected>Select your Institution</option>
+                                <option value="University_A_Campus">University A (Has Campuses)</option>
+                                <option value="University_B_Campus">University B (Has Campuses)</option>
+                                <option value="University_C_NoCampus">University C (No Campuses)</option>
+                                <option value="Other">Other Institution</option>
+                            </select>
+                        </div>
+
+                        <div id="campus_field" class="hidden">
+                            <label for="campus" class="block text-sm font-medium text-gray-700">Campus (if applicable)</label>
+                            <input type="text" id="campus" name="campus" 
+                                   placeholder="e.g., Main Campus, City Branch"
+                                   class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-psso-primary focus:border-psso-primary">
+                        </div>
+
+                        <div>
+                            <label for="college_id_number" class="block text-sm font-medium text-gray-700">College ID Number (Specific College)</label>
+                            <input type="text" id="college_id_number" name="college_id_number"
+                                   placeholder="College/Faculty ID if separate from Student ID"
+                                   class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-psso-primary focus:border-psso-primary">
+                        </div>
+                        
+                        <div>
+                            <label for="level_education" class="block text-sm font-medium text-gray-700">Current Level of Education *</label>
+                            <select id="level_education" name="level_education" required
+                                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-psso-primary focus:border-psso-primary bg-white">
+                                <option value="" disabled selected>Select Level</option>
+                                <option value="Diploma">Diploma</option>
+                                <option value="Degree_Year1">Degree (Year 1)</option>
+                                <option value="Degree_Year2">Degree (Year 2)</option>
+                                <option value="Degree_Year3">Degree (Year 3)</option>
+                                <option value="Degree_Year4+">Degree (Year 4+)</option>
+                                <option value="Postgraduate">Postgraduate</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="section" class="block text-sm font-medium text-gray-700">Procurement Section/Major *</label>
+                            <input type="text" id="section" name="section" required
+                                   placeholder="e.g., Supply Chain Management, Logistics, Stores"
+                                   class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-psso-primary focus:border-psso-primary">
+                        </div>
+                    </div>
+
+                    <hr class="border-gray-200">
+                    
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Other Information</h3>
+
+                    <div>
+                        <label for="referral" class="block text-sm font-medium text-gray-700">How did you hear about PSSO?</label>
+                        <select id="referral" name="referral"
+                                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-psso-primary focus:border-psso-primary bg-white">
+                            <option value="social">Social Media</option>
+                            <option value="friend">Friend/Peer</option>
+                            <option value="event">PSSO Event</option>
+                            <option value="faculty">Faculty/Professor</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="pt-4">
+                        <div class="flex items-start">
+                            <div class="flex items-center h-5">
+                                <input id="consent" name="consent" type="checkbox" required
+                                       class="focus:ring-psso-primary h-4 w-4 text-psso-primary border-gray-300 rounded">
+                            </div>
+                            <div class="ml-3 text-sm">
+                                <label for="consent" class="font-medium text-gray-700">I agree to the PSSO Terms & Conditions and consent to my data being processed for membership purposes. *</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-6">
+                        <button type="submit"
+                                class="w-full py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-bold text-gray-900 bg-psso-accent hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-psso-accent transition duration-300">
+                            Register & Join PSSO
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
