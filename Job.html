@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPSSA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+   
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+
+<!-- Header -->
+    <header id="site-header" class="shadow-lg fixed top-0 left-0 right-0 z-50">
+
+        <div class="bg-fpso-utility text-gray-700 border-b border-gray-200">
+            <div class="container mx-auto px-6 py-2 flex justify-between items-center text-xs sm:text-sm">
+                
+                <div class="space-x-4 hidden md:flex">
+                    <span class="flex items-center">📧 fpssatanzania@gmail.com</span>
+                    <span class="flex items-center">📍 Dodoma Tanzania</span>
+                </div>
+                
+                <div class="space-x-4 flex items-center ml-auto">
+                    <a href="#" class="hover:text-fpso-dark hidden sm:inline">Feedback</a>
+                    <a href="#" class="hover:text-fpso-dark hidden sm:inline">Resources</a>
+                    <div class="text-fpso-dark font-bold space-x-2">
+                        <a href="#" class="hover:underline">EN</a>
+                        <span>|</span>
+                        <a href="#" class="hover:underline text-gray-500">SW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white py-4">
+            <div class="container mx-auto px-6 flex items-center justify-between relative">
+                
+                <a href="#home" class="flex items-center space-x-3 flex-grow md:flex-grow-0">
+                    <img 
+                        src="Picha/Coat_of_arms_of_Tanzania.svg.png" 
+                        alt="FPSO Logo" 
+                        class="h-10 w-10 sm:h-12 sm:w-12 object-contain"
+                    >
+                </a>
+    
+
+                <!-- Centered header title -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 text-center pointer-events-none px-2 z-20">
+                        <div class="text-sm sm:text-xl text-gray-800 leading-tight">
+                            The United Republic of Tanzania
+                            <span class="block font-normal text-blue-900 text-xs sm:text-base">
+                                <b>Federation of Procurement and Supplies Student Association</b> </span>
+                                <span class="block font-normal text-blue-900 text-xs sm:text-base">
+                                <b>{FPSSA Tanzania }</b> </span>
+                        </div>
+                    </div>
+
+                                    <a href="#home" class="hidden sm:flex items-center space-x-3 flex-grow md:flex-grow-0">
+                                        <img 
+                                                src="Picha/FPSSA LOGO 1.png" 
+                                                alt="FPSO Logo" 
+                                                class="h-10 w-10 sm:h-12 sm:w-12 object-contain"
+                                        >
+                                </a>
+                
+                <button id="mobile-menu-toggle" class="md:hidden p-2 text-gray-600 hover:text-fpso-dark" title="Open mobile menu" aria-label="Open mobile menu">
+    
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+                            </div>
+        </div>
+
+        <nav class="bg-fpso-dark shadow-xl hidden md:block">
+            <div class="container mx-auto px-6 flex items-center justify-start h-12">
+                
+                <div class="flex space-x-6 text-white text-sm font-medium">
+                    <a href="Index.html" class="hover:text-fpso-accent py-3 border-b-2 border-transparent hover:border-fpso-accent transition duration-200">Home</a>
+                    <a href="about.html" class="hover:text-fpso-accent py-3 flex items-center group">About Us <span class="ml-1 text-xs group-hover:text-fpso-accent"></span> </a>
+                    <a href="services.html" class="hover:text-fpso-accent py-3 flex items-center group"> Our Services <span class="ml-1 text-xs group-hover:text-fpso-accent"></span>  </a>
+                    <a href="gallery.html" class="hover:text-fpso-accent py-3">Gallery</a>
+                    <a href="news.html" class="hover:text-fpso-accent py-3 flex items-center group">News & Update <span class="ml-1 text-xs group-hover:text-fpso-accent"></span>                  </a>
+                    <a href="Job.html" class="hover:text-fpso-accent py-3 flex items-center group">Jobs <span class="ml-1 text-xs group-hover:text-fpso-accent"></span></a>
+                    <a href="contact.html" class="hover:text-fpso-accent py-3">Contact Us</a>
+                </div>
+
+
+                <div class="ml-auto flex items-center space-x-4">
+                    <form action="#" method="GET" class="flex items-center space-x-2">
+                        <input type="search" placeholder="Search..." class="px-3 py-1.5 rounded-l-md text-gray-800 focus:outline-none focus:ring-1 focus:ring-fpso-accent w-40 md:w-56">
+                        <button type="submit" title="Search" class="bg-fpso-accent hover:bg-yellow-400 text-gray-900 px-3 py-1.5 rounded-r-md transition duration-200">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </button>
+                    </form>
+
+                    <div class="space-x-3 hidden md:flex">
+                        <button id="reg-btn-desktop" class="px-4 py-2 bg-fpso-accent text-gray-900 font-semibold rounded-lg shadow-md hover:bg-yellow-400 transition duration-300">
+                            Register
+                        </button>
+                        <button id="login-btn-desktop" class="px-4 py-2 border bg-indigo-50 text-fpso-dark font-semibold rounded-lg hover:bg-indigo-50 transition duration-300">
+                            Login
+                        </button>
+                    </div>
+                </div>
+
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <div id="mobile-menu-drawer" 
+         class="fixed inset-y-22 left-0 w-64 bg-fpso-dark text-white transform -translate-x-full transition duration-300 ease-in-out z-40 md:hidden overflow-y-auto">
+        
+        <div class="p-4 pt-8">    
+           <nav class="space-y-1">
+                <a href="Index.html" class="block px-3 py-2 hover:bg-fpso-light/20">Home</a>
+                <a href="about.html" class="block px-3 py-2 hover:bg-fpso-light/20 flex justify-between items-center">About Us <span class="text-fpso-accent"></span></a>
+                <a href="services.html" class="block px-3 py-2 hover:bg-fpso-light/20 flex justify-between items-center">Our Services <span class="text-fpso-accent"></span></a>
+                <a href="gallery.html" class="block px-3 py-2 hover:bg-fpso-light/20">Gallery</a>
+                <a href="news.html" class="block px-3 py-2 hover:bg-fpso-light/20 flex justify-between items-center">News & Update<span class="text-fpso-accent"></span></a>
+                <a href="Job.html" class="block px-3 py-2 hover:bg-fpso-light/20 flex justify-between items-center">Jobs <span class="text-fpso-accent"></span></a>
+                <a href="contact.html" class="block px-3 py-2 hover:bg-fpso-light/20">Contact </a>
+            </nav>
+            
+            <div class="mt-8 space-y-3">
+                <a href="registation.html" class="block w-full py-2 bg-fpso-accent text-gray-900 font-semibold rounded-lg text-center">Register</a>
+                <a href="login.html" class="block w-full py-2 border border-white text-white font-semibold rounded-lg text-center">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!--hero-->
+    <body class="bg-gray-50 font-sans">
+
+    <header class="bg-black py-4 shadow-lg">
+        <div class="container mx-auto px-6">
+            <h1 class="text-2xl font-bold text-white">FPSSA - Job Board</h1>
+        </div>
+    </header>
+
+    <section class="bg-white py-12 mb-8 shadow-md">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 text-center mb-6">
+                Exclusive Opportunities for Procurement Students
+            </h2>
+            
+            <div class="flex flex-col sm:flex-row gap-3">
+                <input type="text" id="job-search" placeholder="Search by Company, Role, or City..." 
+                       class="w-full sm:w-2/3 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fp-primary focus:border-fp-primary text-gray-700">
+                
+             <label for="job-filter">Filter by Job Type</label>
+        <select id="job-filter" 
+        class="w-full sm:w-1/3 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fp-primary focus:border-fp-primary bg-white text-gray-700">
+        <option value="all">Full time</option>
+        <option value="internship">Internship</option>
+        <option value="internship">Part time</option>
+        </select>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div id="job-listings-container" class="space-y-6">
+                
+                <article class="job-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-fp-primary hover:shadow-xl transition duration-300" 
+                         data-type="internship" data-keywords="logistics, supply, chain, Nairobi, internship">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800">Procurement Intern</h3>
+                            <p class="text-fp-primary font-semibold">Global Logistics Corp</p>
+                            <span class="text-sm text-gray-500">📍 Dodoma, Tanzania | 📅 Closes: Jan 30</span>
+                        </div>
+                        <div class="text-right">
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Internship</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        Assist the Supply Chain team with vendor onboarding, purchase order processing, and market analysis. Excellent opportunity for 3rd and 4th-year students.
+                    </p>
+                    <button class="apply-btn px-6 py-2 bg-fp-success text-white font-semibold rounded-lg hover:bg-emerald-600 transition duration-300"
+                            data-apply-type="email" data-target="careers@globallogistics.co">
+                        Apply via Email
+                    </button>
+                </article>
+
+                <article class="job-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-fp-primary hover:shadow-xl transition duration-300" 
+                         data-type="full-time" data-keywords="analyst, data, government, Dar es Salaam, graduate">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800">Junior Sourcing Analyst</h3>
+                            <p class="text-fp-primary font-semibold">Public Sector Procurement Agency</p>
+                            <span class="text-sm text-gray-500">📍 Dar es Salaam, Tanzania | 📅 Closes: Dec 15</span>
+                        </div>
+                        <div class="text-right">
+                            <span class="inline-block bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full">Full-Time</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        Responsible for bid evaluation, contract monitoring, and ensuring compliance with national procurement regulations. Recent graduates are encouraged to apply.
+                    </p>
+                    <button class="apply-btn px-6 py-2 bg-fp-secondary text-gray-900 font-semibold rounded-lg hover:bg-yellow-400 transition duration-300"
+                            data-apply-type="link" data-target="https://www.ajira.go.tz/job/junior-analyst-ppsa-2025">
+                        Apply on Ajira Portal
+                    </button>
+                </article>
+
+                <article class="job-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-fp-primary hover:shadow-xl transition duration-300" 
+                         data-type="graduate" data-keywords="trainee, graduate, rotational, program, Kampala">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800">Procurement Graduate Trainee</h3>
+                            <p class="text-fp-primary font-semibold">East Africa Manufacturing PLC</p>
+                            <span class="text-sm text-gray-500">📍 Mwanza, Tanzania| 📅 Closes: Feb 28</span>
+                        </div>
+                        <div class="text-right">
+                            <span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">Graduate Program</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        A 12-month rotational program covering strategic sourcing, vendor management, and contract law across three departments.
+                    </p>
+                    <button class="apply-btn px-6 py-2 bg-fp-primary text-white font-semibold rounded-lg hover:bg-indigo-700 transition duration-300"
+                            data-apply-type="form" data-target="#application-form-modal">
+                        Apply Now
+                    </button>
+                </article>
+
+                <div id="no-results" class="hidden text-center py-10 bg-white rounded-xl shadow-lg">
+                    <p class="text-xl text-gray-600">😔 No jobs match your current search criteria.</p>
+                    <p class="text-sm text-gray-500 mt-2">Try different keywords or check back soon!</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+   
+
+
+        <!-- Footer -->
+    <footer class="bg-fpso-dark text-white py-12">
+        <div class="container mx-auto px-6">
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-white pb-8 mb-8">
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-fpso-accent">FPSSA Tanzania</h3>
+                    <p class="text-sm text-white">We Deliver Cutting-Edge hance.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold text-fpso-accent mb-4">Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-white hover:text-fpso-accent">Home</a></li>
+                        <li><a href="#" class="text-white hover:text-fpso-accent">About Us</a></li>
+                        <li><a href="#" class="text-white hover:text-fpso-accent">Our Services</a></li>
+                        <li><a href="#" class="text-white hover:text-fpso-accent">Client</a></li>
+                        <li><a href="#" class="text-white hover:text-fpso-accent">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-fpso-accent mb-4">Legal</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-white hover:text-fpso-accent">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white hover:text-fpso-accent">Terms of Service</a></li>
+                        <li><a href="#" class="text-white hover:text-fpso-accent">Sitemap</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold text-fpso-accent mb-4">Contact</h3>
+                    <p class="text-sm text-white">Dodoma Tanzania</p>
+                    <p class="text-sm text-white">fpssatanzania@gmail.com</p>
+                    <p class="text-sm text-white">(+255) 672 743 065</p>
+                </div>
+
+            </div>
+
+            <div class="text-center text-sm text-white">
+                &copy; 2025  Federation of Procurement and Supplies Students Association. All rights reserved.
+            </div>
+            
+        </div>
+    </footer>
+    
+  
+    <script src="script.js"></script>
+
+   
+</body>
+</html>
