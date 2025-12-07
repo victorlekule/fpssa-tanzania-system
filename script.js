@@ -294,40 +294,41 @@ document.addEventListener('DOMContentLoaded', () => {
             const passwordInput = document.getElementById('password');
             const errorMessage = document.getElementById('error-message');
 
-            // Define a placeholder for valid credentials (for simulation only)
-            const VALID_USERNAME = 'PS123';
-            const VALID_PASSWORD = 'password123';
-            const DASHBOARD_URL = 'member-dashboard.html'; // Hypothetical dashboard page
+            // --- HARDCODED DEMO CREDENTIALS ---
+            const DEMO_USERNAME = "MZA/BPLM/22/107505";
+            const DEMO_PASSWORD = "Victor@2025";
+            const DASHBOARD_URL = 'Member.html'; // Ensure this matches your dashboard filename
 
             loginForm.addEventListener('submit', (e) => {
-                e.preventDefault(); // Prevent default form submission
+                e.preventDefault(); // Stop the form from performing a real submission
 
+                // Normalize inputs to trim whitespace
                 const enteredUsername = usernameInput.value.trim();
                 const enteredPassword = passwordInput.value.trim();
                 
-                // Reset error message
+                // Hide any previous error message
                 errorMessage.classList.add('hidden');
 
-                // --- LOGIN SIMULATION LOGIC ---
-                if (enteredUsername === VALID_USERNAME && enteredPassword === VALID_PASSWORD) {
+                // --- CHECK DEMO CREDENTIALS ---
+                if (enteredUsername === DEMO_USERNAME && enteredPassword === DEMO_PASSWORD) {
                     
-                    // 1. Success - Simulate API call success
-                    console.log("Login Successful! Redirecting...");
-                    
-                    // 2. Redirect to the membership dashboard
+                    // 1. Successful Login: Log and redirect
+                    console.log("Demo Login Successful for Victor!");
+                    // Redirect to the dashboard page
                     window.location.href = DASHBOARD_URL;
 
                 } else {
                     
-                    // 1. Failure - Display error message
-                    console.error("Login Failed: Invalid credentials.");
+                    // 2. Failed Login: Display error
+                    console.error("Login Failed: Incorrect demo credentials.");
                     errorMessage.classList.remove('hidden');
 
-                    // 2. Optional: Clear password field for security
+                    // Optional: Clear password field for security
                     passwordInput.value = '';
                 }
             });
         });
+
 
         //member dashboard script//
         document.addEventListener('DOMContentLoaded', () => {
@@ -552,4 +553,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Event listeners for search
             eventSearchInput.addEventListener('input', filterEvents);
+        });
+
+        //member dashboard script registation//
+        document.addEventListener('DOMContentLoaded', () => {
+            const universitySelect = document.getElementById('university');
+            const campusField = document.getElementById('campus_field');
+            const campusInput = document.getElementById('campus');
+
+            const toggleCampusField = () => {
+                const selectedValue = universitySelect.value;
+                
+                // Check if the selected university value contains "_NoCampus"
+                if (selectedValue.includes('_NoCampus')) {
+                    campusField.classList.add('hidden');
+                    campusInput.removeAttribute('required'); // Remove required attribute
+                } else {
+                    campusField.classList.remove('hidden');
+                    // Add back required attribute only if needed, 
+                    // but often for complex forms, it's better to make it optional unless strictly necessary.
+                    // campusInput.setAttribute('required', 'required'); 
+                }
+            };
+
+            // Run on page load
+            toggleCampusField();
+
+            // Run on university change
+            universitySelect.addEventListener('change', toggleCampusField);
         });
