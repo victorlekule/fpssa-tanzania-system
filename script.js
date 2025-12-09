@@ -7,6 +7,7 @@ tailwind.config = {
                         'fpso-accent': '#ffcc00', // Gold/Yellow - Accent/Buttons
                         'fpso-utility': '#f3f4f6', // Light Gray - Utility Bar
                         'fpso-green': '#2C860B', // dark Green - Utility Bar
+                        'fpso-red': '#F40E0E', // dark Green - Utility Bar
                     }
                 }
             }
@@ -370,6 +371,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // NOTE: The Upcoming Events list is hardcoded in HTML for this template, 
             // but in a real app, this JS function would fetch it.
         });
+
+
    //payment script//
    document.addEventListener('DOMContentLoaded', () => {
             const paymentDetailsDiv = document.getElementById('payment-details');
@@ -397,7 +400,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
                 <div class="bg-yellow-50 p-3 rounded text-sm mt-3">
-                    <strong>Bank Details (for manual transfer):</strong> A/C Name: PSSO Fund | A/C No: 123456789 | Bank: Local Commerce Bank
+                    <strong>Bank Details (for manual transfer):</strong> A/C Name: FPSSA Fund | A/C No: 123456789 | Bank: CRDB Bank
                 </div>
             `;
 
@@ -470,6 +473,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, 2000); 
             });
         });
+
 
         //club script//
        document.addEventListener('DOMContentLoaded', () => {
