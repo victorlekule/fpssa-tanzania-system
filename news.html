@@ -5,280 +5,352 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FPSSA</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="style.css">
    
 </head>
 
 <body class="bg-gray-100 font-sans">
-
-
 <!-- Header -->
-    <header id="site-header" class="shadow-lg fixed top-0 left-0 right-0 z-50">
+<header id="main-header" class="shadow-lg fixed top-0 left-0 w-full z-50 bg-white">
+        <div class="bg-white py-4 md:py-8">
+            <div class="container mx-auto px-4 md:px-6 flex items-center justify-between relative">
+                
+                <a href="#home" class="flex items-center space-x-3 flex-grow md:flex-grow-0">
+                    <img src="Picha/Coat_of_arms_of_Tanzania.svg.png" alt="Logo" class="h-8 w-8 sm:h-10 sm:w-10 object-contain">
+                </a>
 
-        <div class="bg-fpso-utility text-gray-700 border-b border-gray-200">
-            <div class="container mx-auto px-6 py-2 flex justify-between items-center text-xs sm:text-sm">
-                
-                <div class="space-x-4 hidden md:flex">
-                    <span class="flex items-center">📧 fpssatanzania@gmail.com</span>
-                    <span class="flex items-center">📍 Dodoma Tanzania</span>
-                </div>
-                
-                <div class="space-x-4 flex items-center ml-auto">
-                    <a href="#" class="hover:text-fpso-dark hidden sm:inline">Feedback</a>
-                    <a href="#" class="hover:text-fpso-dark hidden sm:inline">Resources</a>
-                    <div class="text-fpso-dark font-bold space-x-2">
-                        <a href="#" class="hover:underline">EN</a>
-                        <span>|</span>
-                        <a href="#" class="hover:underline text-gray-500">SW</a>
+                <div class="absolute left-1/2 transform -translate-x-1/2 text-center pointer-events-none px-2 z-20 w-full max-w-[60%] sm:max-w-none">
+                    <div class="text-[10px] sm:text-sm md:text-xl text-black leading-tight">
+                        The United Republic of Tanzania <br>
+                        <span class="block font-normal text-black text-[8px] sm:text-xs md:text-base">
+                            <b>Federation of Procurement and Supplies Student Association</b> </span>
+                        <span class="block font-normal text-black text-[8px] sm:text-xs md:text-base">
+                            <b>{FPSSA Tanzania }</b> </span>
                     </div>
                 </div>
+
+                <a href="#home" class="hidden sm:flex items-center space-x-3 flex-grow md:flex-grow-0">
+                    <img src="Picha/FPSSA LOGO 1.png" alt="Logo" class="h-8 w-8 sm:h-10 sm:w-10 object-contain">
+                </a>
+        
+                <button id="mobile-menu-toggle" class="md:hidden p-2 text-gray-600 hover:text-blue-900">
+                    <svg id="icon-open" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <svg id="icon-close" class="hidden w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
             </div>
         </div>
 
-        <div class="bg-white py-8">
-            <div class="container mx-auto px-6 flex items-center justify-between relative">
-                
-                <a href="#home" class="flex items-center space-x-3 flex-grow md:flex-grow-0">
-                    <img 
-                        src="Picha/Coat_of_arms_of_Tanzania.svg.png" 
-                        alt="FPSO Logo" 
-                        class="h-10 w-10 sm:h-10 sm:w-10 object-contain"
-                    >
-                </a>
-    
-
-                <!-- Centered header title -->
-                    <div class="absolute left-1/2 transform -translate-x-1/2 text-center pointer-events-none px-2 z-20">
-                        <div class="text-sm sm:text-xl text-gray-800 leading-tight">
-                            The United Republic of Tanzania
-                            <span class="block font-normal text-black text-xs sm:text-base">
-                                <b>Federation of Procurement and Supplies Student Association</b> </span>
-                                <span class="block font-normal text-black text-xs sm:text-base">
-                                <b>{FPSSA Tanzania }</b> </span>
-                        </div>
-                    </div>
-
-                                    <a href="#home" class="hidden sm:flex items-center space-x-3 flex-grow md:flex-grow-0">
-                                        <img 
-                                                src="Picha/FPSSA LOGO 1.png" 
-                                                alt="FPSO Logo" 
-                                                class="h-10 w-10 sm:h-10 sm:w-10 object-contain"
-                                        >
-                                </a>
-                
-                <button id="mobile-menu-toggle" class="md:hidden p-2 text-gray-600 hover:text-fpso-dark" title="Open mobile menu" aria-label="Open mobile menu">
-    
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-                            </div>
-        </div>
-
-        <nav class="bg-fpso-dark shadow-xl hidden md:block">
-            <div class="container mx-auto px-6 flex items-center justify-start h-12">
-                
-                <div class="flex space-x-6 text-white text-sm font-medium">
-                    <a href="Index.html" class="hover:text-fpso-accent py-3 border-b-2 border-transparent hover:border-fpso-accent transition duration-200">Home</a>
-                    <a href="about.html" class="hover:text-fpso-accent py-3 flex items-center group">About Us <span class="ml-1 text-xs group-hover:text-fpso-accent"></span> </a>
-                    <a href="services.html" class="hover:text-fpso-accent py-3 flex items-center group"> Our Services <span class="ml-1 text-xs group-hover:text-fpso-accent"></span>  </a>
-                    <a href="gallery.html" class="hover:text-fpso-accent py-3">Gallery</a>
-                    <a href="club.html" class="hover:text-fpso-accent py-3">Club</a>
-                    <a href="news.html" class="hover:text-fpso-accent py-3 flex items-center group">News & Update <span class="ml-1 text-xs group-hover:text-fpso-accent"></span>                  </a>
-                    <a href="Job.html" class="hover:text-fpso-accent py-3 flex items-center group">Jobs <span class="ml-1 text-xs group-hover:text-fpso-accent"></span></a>
-                    <a href="contact.html" class="hover:text-fpso-accent py-3">Contact Us</a>
+        <nav class="bg-blue-900 shadow-xl hidden md:block">
+            <div class="container mx-auto px-4 md:px-6 flex items-center justify-between h-12">
+                <div class="flex space-x-2 lg:space-x-6 text-white text-[10px] lg:text-sm font-medium">
+                    <a href="Index.html" class="hover:text-yellow-400 py-3 transition">Home</a>
+                    <a href="about.html" class="hover:text-yellow-400 py-3 transition">About Us</a>
+                    <a href="services.html" class="hover:text-yellow-400 py-3 transition">Our Services</a>
+                    <a href="gallery.html" class="hover:text-yellow-400 py-3 transition">Gallery</a>
+                    <a href="club.html" class="hover:text-yellow-400 py-3 transition">Clubs</a>
+                    <a href="news.html" class="hover:text-yellow-400 py-3 transition">News & Update</a>
+                    <a href="Job.html" class="hover:text-yellow-400 py-3 transition">Jobs</a>
+                    <a href="contact.html" class="hover:text-yellow-400 py-3 transition">Contact Us</a>
                 </div>
-
-
-                <div class="ml-auto flex items-center space-x-4">
-                    <form action="#" method="GET" class="flex items-center space-x-2">
-                        <input type="search" placeholder="Search..." class="px-3 py-1.5 rounded-l-md text-gray-800 focus:outline-none focus:ring-1 focus:ring-fpso-accent w-40 md:w-56">
-                        <button type="submit" title="Search" class="bg-fpso-accent hover:bg-yellow-400 text-gray-900 px-3 py-1.5 rounded-r-md transition duration-200">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <div class="ml-auto flex items-center space-x-2 lg:space-x-4">
+                    <form action="#" method="GET" class="hidden lg:flex items-center space-x-2">
+                        <input type="search" placeholder="Search..." class="px-3 py-1.5 rounded-l-md text-gray-800 focus:outline-none w-32">
+                        <button type="submit" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-3 py-1.5 rounded-r-md">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                         </button>
                     </form>
-
-                    <div class="space-x-3 hidden md:flex">
-                    <a href="registation.html" id="reg-btn-desktop" class="px-4 py-2 bg-fpso-accent text-gray-900 font-semibold rounded-lg shadow-md hover:bg-yellow-400 transition duration-300 inline-block">  Register </a>
-                        <a href="login.html" id="login-btn-desktop" class="px-4 py-2 border border-indigo-200 bg-indigo-50 text-fpso-dark font-semibold rounded-lg hover:bg-indigo-100 transition duration-300 inline-block"> Login </a>
+                    <div class="space-x-2 flex">
+                        <a href="registation.html" class="px-2 lg:px-4 py-2 bg-yellow-400 text-gray-900 text-[10px] lg:text-sm font-semibold rounded hover:bg-yellow-300 transition">Register</a>
+                        <a href="login.html" class="px-2 lg:px-4 py-2 bg-white text-blue-900 text-[10px] lg:text-sm font-semibold rounded hover:bg-gray-100 transition">Login</a>
                     </div>
                 </div>
-
-                </div>
-
             </div>
         </nav>
     </header>
 
-    <div id="mobile-menu-drawer" 
-         class="fixed inset-y-22 left-0 w-64 bg-fpso-dark text-white transform -translate-x-full transition duration-300 ease-in-out z-40 md:hidden overflow-y-auto">
-        
-        <div class="p-4 pt-8">    
-           <nav class="space-y-1">
-                <a href="Index.html" class="block px-3 py-2 hover:bg-fpso-light/20">Home</a>
-                <a href="about.html" class="block px-3 py-2 hover:bg-fpso-light/20 flex justify-between items-center">About Us <span class="text-fpso-accent"></span></a>
-                <a href="services.html" class="block px-3 py-2 hover:bg-fpso-light/20 flex justify-between items-center">Our Services <span class="text-fpso-accent"></span></a>
-                <a href="gallery.html" class="block px-3 py-2 hover:bg-fpso-light/20">Gallery</a>
-                <a href="club.html" class="block px-3 py-2 hover:bg-fpso-light/20">Club</a>
-                <a href="news-update.html" class="block px-3 py-2 hover:bg-fpso-light/20 flex justify-between items-center">News & Update<span class="text-fpso-accent"></span></a>
-                <a href="Job.html" class="block px-3 py-2 hover:bg-fpso-light/20 flex justify-between items-center">Jobs <span class="text-fpso-accent"></span></a>
-                <a href="contact.html" class="block px-3 py-2 hover:bg-fpso-light/20">Contact </a>
+    <div id="mobile-menu-drawer" class="fixed left-0 z-40 bg-blue-900 w-max pr-10 rounded-br-lg shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+        <div class="p-6">
+            <nav class="flex flex-col space-y-6 text-left">
+                <a href="Index.html" class="block text-white text-lg font-medium hover:text-yellow-400 transition-colors">Home</a>
+                <a href="about.html" class="block text-white text-lg font-medium hover:text-yellow-400 transition-colors">About Us</a>
+                <a href="services.html" class="block text-white text-lg font-medium hover:text-yellow-400 transition-colors">Our Services</a>
+                <a href="gallery.html" class="block text-white text-lg font-medium hover:text-yellow-400 transition-colors">Gallery</a>
+                <a href="club.html" class="block text-white text-lg font-medium hover:text-yellow-400 transition-colors">Clubs</a>
+                <a href="news.html" class="block text-white text-lg font-medium hover:text-yellow-400 transition-colors">News</a>
+                <a href="contact.html" class="block text-white text-lg font-medium hover:text-yellow-400 transition-colors">Contact Us</a>
+                
+                <div class="pt-4 flex flex-col space-y-4 w-40">
+                    <a href="registation.html" class="block w-full py-2 bg-yellow-400 text-gray-900 font-bold rounded text-center shadow">Register</a>
+                    <a href="login.html" class="block w-full py-2 border border-white text-white font-bold rounded text-center hover:bg-white hover:text-blue-900 transition">Login</a>
+                </div>
             </nav>
-            
-            <div class="mt-8 space-y-3">
-                <a href="registation.html" class="block w-full py-2 bg-fpso-accent text-gray-900 font-semibold rounded-lg text-center">Register</a>
-                <a href="login.html" class="block w-full py-2 border border-white text-white font-semibold rounded-lg text-center">Login</a>
-            </div>
         </div>
     </div>
 
+    <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden glass"></div>
+
+ <!--  end of Header -->  
+
     <!--hero-->
     
-    <section class="bg-white py-16 mb-12 shadow-md">
-        <div class="container mx-auto px-6 text-center">
-            <p class="text-lg font-semibold uppercase tracking-widest text-fpso-dark mb-3">Stay Informed</p>
-            <h2 class="text-4xl md:text-5xl font-extrabold text-fpso-dark">
-                Latest from the World of Procurement
-            </h2>
-        </div>
-    </section>
+<section class="bg-white pt-32 md:pt-48 pb-12 mb-12 shadow-sm relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-64 h-64 bg-emerald-100 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2"></div>
+    
+    <div class="container mx-auto px-6 text-center relative z-10">
+        <p class="text-sm font-bold uppercase tracking-widest text-emerald-600 bg-emerald-100 px-4 py-1 rounded-full inline-block mb-4">Stay Informed</p>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900">
+            Latest from the World of <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">Procurement</span>
+        </h2>
+    </div>
+</section>
 
-    <section class="py-12">
-        <div class="container mx-auto px-6">
-            <div class="max-w-xl mx-auto mb-10">
-                <div class="flex items-center border border-fpso-green rounded-lg overflow-hidden shadow-sm focus-within:ring-2 focus-within:ring-fp-primary">
-                    <input type="text" id="news-search" placeholder="Search news and updates..." class="w-full px-4 py-2 text-gray-700 focus:outline-none border-none">
-                    <button type="button" id="search-button" class="bg-fpso-green hover:bg-fp-primary/90 text-white px-4 py-2 transition duration-200" title="Search">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                    </button>
-                </div>
-            </div>
-
-            <div id="news-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <article class="news-item bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1" 
-                         data-tags="seminar, AI, technology, innovation, 2025">
-                    <img src="Picha/study-group-learning-library.jpg" alt="AI in Procurement Seminar" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="block text-sm text-fpso-dark mb-2">October 26, 2025</span>
-                        <h3 class="text-xl font-bold text-fpso-green mb-3">AI in Procurement: The Future is Now</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            FPSSA hosted a groundbreaking seminar exploring the impact of Artificial Intelligence on modern procurement practices, featuring insights from leading industry experts. Participants gained valuable knowledge on leveraging AI for efficiency and strategic decision-making.
-                        </p>
-                        <a href="read more.html" class="mt-4 inline-block text-fpso-dark hover:text-fp-secondary font-semibold">Read More &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="news-item bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1"
-                         data-tags="awards, students, recognition, achievement, 2025">
-                    <img src="Picha/study-group-learning-library.jpg" alt="Student Awards Ceremony" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="block text-sm text-fpso-dark mb-2">September 15, 2025</span>
-                        <h3 class="text-xl font-bold text-fpso-green mb-3">Annual Student Procurement Awards 2025</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            We celebrated our brightest talents at the annual awards ceremony, recognizing outstanding academic performance and innovative project contributions by FPSSA members.
-                        </p>
-                        <a href="read more.html" class="mt-4 inline-block text-fpso-dark hover:text-fp-secondary font-semibold">Read More &rarr;</a>
-                    </div>
-                </article>
-                
-                <article class="news-item bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1"
-                         data-tags="partnership, corporate, collaboration, industry, 2024">
-                    <img src="Picha/study-group-learning-library.jpg" alt="New Corporate Partner" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="block text-sm text-fpso-dark mb-2">August 01, 2024</span>
-                        <h3 class="text-xl font-bold text-fpso-green mb-3">FPSA Welcomes New Corporate Partner</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            Exciting news! We're thrilled to announce a strategic partnership with Global Supply Solutions, opening new doors for internships and exclusive member insights.
-                        </p>
-                        <a href="read more.html" class="mt-4 inline-block text-fpso-dark hover:text-fp-secondary font-semibold">Read More &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="news-item bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1"
-                         data-tags="workshop, sustainability, green procurement, environment, 2024">
-                    <img src="Picha/study-group-learning-library.jpg" alt="Sustainability Workshop" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="block text-sm text-fpso-dark mb-2">July 10, 2024</span>
-                        <h3 class="text-xl font-bold text-fpso-green mb-3">Sustainability in Procurement Workshop</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            Our latest workshop focused on integrating sustainable practices into procurement, equipping students with the knowledge to drive environmentally responsible supply chains.
-                        </p>
-                        <a href="read more.html" class="mt-4 inline-block text-fpso-dark hover:text-fp-secondary font-semibold">Read More &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="news-item bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-1"
-                         data-tags="event, networking, industry leaders, careers, 2023">
-                    <img src="Picha/study-group-learning-library.jpg" alt="Industry Networking Event" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="block text-sm text-fpso-dark mb-2">November 20, 2023</span>
-                        <h3 class="text-xl font-bold text-fpso-green mb-3">Annual Industry Networking Forum Success</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            The forum connected students with over 30 industry leaders, facilitating invaluable discussions on career paths and industry trends.
-                        </p>
-                        <a href="read more.html" class="mt-4 inline-block text-fpso-dark hover:text-fp-secondary font-semibold">Read More &rarr;</a>
-                    </div>
-                </article>
-                
-            </div>
-
-            <div class="text-center mt-12">
-                <button class="px-6 py-3 bg-fpso-green text-white rounded-lg hover:bg-fpso-dark transition duration-300">
-                    Load More News
+<section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-6">
+        
+        <div class="max-w-xl mx-auto mb-16 relative z-20">
+            <div class="relative group">
+                <input 
+                    type="text" 
+                    id="news-search" 
+                    placeholder="Search news (e.g., 'AI', 'Awards', 'Workshop')..." 
+                    class="w-full pl-6 pr-14 py-4 bg-white border-2 border-gray-100 focus:border-emerald-500 rounded-full shadow-lg text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-emerald-500/10 transition-all"
+                >
+                <button type="button" id="search-button" class="absolute right-2 top-2 bottom-2 bg-emerald-500 hover:bg-emerald-600 text-white px-6 rounded-full transition duration-200 flex items-center justify-center">
+                    <i class="fa-solid fa-search"></i>
                 </button>
             </div>
-
         </div>
-    </section>
-    
+
+        <div id="news-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <article class="news-item bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border-t-4 border-emerald-500" 
+                     data-tags="seminar ai technology innovation 2025">
+                <div class="relative overflow-hidden h-48">
+                    <img src="Picha/study-group-learning-library.jpg" alt="AI Seminar" class="w-full h-full object-cover transform hover:scale-110 transition duration-700">
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-lg text-xs font-bold text-emerald-600 shadow-sm">
+                        Technology
+                    </div>
+                </div>
+                <div class="p-8">
+                    <span class="block text-xs font-bold text-emerald-500 mb-2 uppercase tracking-wide">October 26, 2025</span>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3 hover:text-emerald-600 transition-colors">AI in Procurement: The Future is Now</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                        FPSSA hosted a groundbreaking seminar exploring the impact of Artificial Intelligence on modern procurement practices, featuring insights from leading industry experts.
+                    </p>
+                    <a href="read_more.html" class="inline-flex items-center text-emerald-600 font-bold text-sm hover:underline">
+                        Read Full Story <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="news-item bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border-t-4 border-blue-600"
+                     data-tags="awards students recognition achievement 2025">
+                <div class="relative overflow-hidden h-48">
+                    <img src="Picha/study-group-learning-library.jpg" alt="Student Awards" class="w-full h-full object-cover transform hover:scale-110 transition duration-700">
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-lg text-xs font-bold text-blue-600 shadow-sm">
+                        Achievement
+                    </div>
+                </div>
+                <div class="p-8">
+                    <span class="block text-xs font-bold text-blue-500 mb-2 uppercase tracking-wide">September 15, 2025</span>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3 hover:text-blue-600 transition-colors">Student Procurement Awards 2025</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                        We celebrated our brightest talents at the annual awards ceremony, recognizing outstanding academic performance and innovative project contributions.
+                    </p>
+                    <a href="read_more.html" class="inline-flex items-center text-blue-600 font-bold text-sm hover:underline">
+                        Read Full Story <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </article>
+            
+            <article class="news-item bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border-t-4 border-amber-500"
+                     data-tags="partnership corporate collaboration industry 2024">
+                <div class="relative overflow-hidden h-48">
+                    <img src="Picha/study-group-learning-library.jpg" alt="Corporate Partner" class="w-full h-full object-cover transform hover:scale-110 transition duration-700">
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-lg text-xs font-bold text-amber-600 shadow-sm">
+                        Partnership
+                    </div>
+                </div>
+                <div class="p-8">
+                    <span class="block text-xs font-bold text-amber-500 mb-2 uppercase tracking-wide">August 01, 2024</span>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3 hover:text-amber-500 transition-colors">New Corporate Partner Announced</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                        Exciting news! We're thrilled to announce a strategic partnership with Global Supply Solutions, opening new doors for internships and exclusive insights.
+                    </p>
+                    <a href="read_more.html" class="inline-flex items-center text-amber-600 font-bold text-sm hover:underline">
+                        Read Full Story <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="news-item bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border-t-4 border-gray-900"
+                     data-tags="workshop sustainability green procurement environment 2024">
+                <div class="relative overflow-hidden h-48">
+                    <img src="Picha/study-group-learning-library.jpg" alt="Sustainability Workshop" class="w-full h-full object-cover transform hover:scale-110 transition duration-700">
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-lg text-xs font-bold text-gray-900 shadow-sm">
+                        Education
+                    </div>
+                </div>
+                <div class="p-8">
+                    <span class="block text-xs font-bold text-gray-900 mb-2 uppercase tracking-wide">July 10, 2024</span>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3 hover:text-gray-600 transition-colors">Sustainability in Procurement</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                        Our latest workshop focused on integrating sustainable practices into procurement, equipping students with the knowledge to drive environmentally responsible supply chains.
+                    </p>
+                    <a href="read_more.html" class="inline-flex items-center text-gray-900 font-bold text-sm hover:underline">
+                        Read Full Story <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="news-item bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border-t-4 border-emerald-500"
+                     data-tags="event networking industry leaders careers 2023">
+                <div class="relative overflow-hidden h-48">
+                    <img src="Picha/study-group-learning-library.jpg" alt="Networking Event" class="w-full h-full object-cover transform hover:scale-110 transition duration-700">
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-lg text-xs font-bold text-emerald-600 shadow-sm">
+                        Networking
+                    </div>
+                </div>
+                <div class="p-8">
+                    <span class="block text-xs font-bold text-emerald-500 mb-2 uppercase tracking-wide">November 20, 2023</span>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3 hover:text-emerald-600 transition-colors">Industry Networking Forum</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                        The forum connected students with over 30 industry leaders, facilitating invaluable discussions on career paths and emerging industry trends.
+                    </p>
+                    <a href="read_more.html" class="inline-flex items-center text-emerald-600 font-bold text-sm hover:underline">
+                        Read Full Story <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </article>
+            
+        </div>
+
+        <div class="text-center mt-16">
+            <button class="group px-8 py-3 bg-white border-2 border-emerald-600 text-emerald-600 font-bold rounded-full hover:bg-emerald-600 hover:text-white transition-all duration-300 shadow-md">
+                Load More News <i class="fa-solid fa-rotate-right ml-2 group-hover:rotate-180 transition-transform duration-500"></i>
+            </button>
+        </div>
+
+        <div id="news-no-results" class="hidden text-center py-20">
+            <h3 class="text-xl font-bold text-gray-700">No updates found</h3>
+            <p class="text-gray-500">Try searching for different keywords.</p>
+        </div>
+
+    </div>
+</section>
    
 
 
         <!-- Footer -->
-    <footer class="bg-fpso-dark text-white py-12">
-        <div class="container mx-auto px-6">
+<footer class="bg-[#0f172a] text-gray-400 py-12 lg:py-16 font-sans text-sm overflow-hidden">
+    <div class="container mx-auto px-4 lg:px-6 reveal-on-scroll">
+        
+        <div class="grid grid-cols-2 lg:grid-cols-5 gap-x-2 gap-y-8 lg:gap-2 items-start mb-12">
             
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-white pb-8 mb-8">
-                
-                <div>
-                    <h3 class="text-lg font-bold mb-4 text-fpso-accent">FPSSA Tanzania</h3>
-                    <p class="text-sm text-white">The Federation of Procurement and Supply Students’ Associations (FPSSA) Tanzania was established to address the emerging needs and challenges in the procurement and supplies sector. In a world that is increasingly interconnected, the FPSSA plays a crucial role in ensuring that students understand the core values, ethics, and professional standards expected in the procurement field.</p>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold text-fpso-accent mb-4">Links</h3>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="index.html" class="text-white hover:text-fpso-accent">Home</a></li>
-                        <li><a href="about.html" class="text-white hover:text-fpso-accent">About Us</a></li>
-                        <li><a href="services.html" class="text-white hover:text-fpso-accent">Our Services</a></li>
-                        <li><a href="club.html" class="text-white hover:text-fpso-accent">Club</a></li>
-                        <li><a href="contact.html" class="text-white hover:text-fpso-accent">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="text-lg font-semibold text-fpso-accent mb-4">Other Link</h3>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="text-white hover:text-fpso-accent">PSPTB</a></li>
-                        <li><a href="#" class="text-white hover:text-fpso-accent">PPRA</a></li>
-                        <li><a href="#" class="text-white hover:text-fpso-accent">PPA</a></li>
-                    </ul>
-                </div>
-                
-                <div class="space-y-2">
-                    <h3 class="text-lg font-semibold text-fpso-accent mb-4">Contact</h3>
-                    <p class="text-sm text-white">Dodoma Tanzania</p>
-                    <p class="text-sm text-white">fpssatanzania@gmail.com</p>
-                    <p class="text-sm text-white">(+255) 672 743 065</p>
-                </div>
-
+            <div class="col-span-2 lg:col-span-1 space-y-4 lg:pr-20">
+                <h3 class="text-lg font-bold text-white mb-2">FPSSA Tanzania</h3>
+                <p class="leading-relaxed text-left pr-2 lg:pr-0">
+                    We deliver excellence in procurement leadership, enhancing skills, ensuring ethics, and establishing a powerful professional presence for students across Tanzania.
+                </p>
             </div>
 
-            <div class="text-center text-sm text-white">
-                &copy; 2025  Federation of Procurement and Supplies Students Association. All rights reserved.
+            <div class="col-span-1">
+                <h3 class="text-base lg:text-lg font-bold text-white mb-4">Quick Links</h3>
+                <ul class="space-y-1.5">
+                    <li><a href="index.html" class="hover:text-emerald-400 hover:translate-x-1 transition-all duration-300 block py-0.5">Home</a></li>
+                    <li><a href="about.html" class="hover:text-emerald-400 hover:translate-x-1 transition-all duration-300 block py-0.5">About Us</a></li>
+                    <li><a href="services.html" class="hover:text-emerald-400 hover:translate-x-1 transition-all duration-300 block py-0.5">Our Services</a></li>
+                    <li><a href="club.html" class="hover:text-emerald-400 hover:translate-x-1 transition-all duration-300 block py-0.5">Student Club</a></li>
+                    <li><a href="contact.html" class="hover:text-emerald-400 hover:translate-x-1 transition-all duration-300 block py-0.5">Contact</a></li>
+                </ul>
             </div>
-            
+
+            <div class="col-span-1">
+                <h3 class="text-base lg:text-lg font-bold text-white mb-4">Relevant Links</h3>
+                <ul class="space-y-1.5">
+                    <li><a href="#" class="hover:text-emerald-400 hover:translate-x-1 transition-all duration-300 flex items-center py-0.5"><i class="fa-solid fa-link mr-2 text-xs"></i> PSPTB</a></li>
+                    <li><a href="#" class="hover:text-emerald-400 hover:translate-x-1 transition-all duration-300 flex items-center py-0.5"><i class="fa-solid fa-link mr-2 text-xs"></i> PPRA</a></li>
+                    <li><a href="#" class="hover:text-emerald-400 hover:translate-x-1 transition-all duration-300 flex items-center py-0.5"><i class="fa-solid fa-link mr-2 text-xs"></i> PPA</a></li>
+                    <li><a href="#" class="hover:text-emerald-400 hover:translate-x-1 transition-all duration-300 flex items-center py-0.5"><i class="fa-solid fa-link mr-2 text-xs"></i> Portal</a></li>
+                </ul>
+            </div>
+
+            <div class="col-span-1">
+                <h3 class="text-base lg:text-lg font-bold text-white mb-4">Social Media</h3>
+                
+                <div class="flex flex-row lg:flex-col gap-5 lg:gap-2 flex-wrap">
+                    
+                    <a href="#" class="flex items-center gap-2 hover:text-emerald-400 transition-all duration-300 group">
+                        <i class="fa-brands fa-instagram text-2xl lg:text-lg lg:w-5 transform group-hover:scale-110 transition-transform"></i> 
+                        <span class="hidden lg:inline group-hover:translate-x-1 transition-transform">Instagram</span>
+                    </a>
+                    
+                    <a href="#" class="flex items-center gap-2 hover:text-emerald-400 transition-all duration-300 group">
+                        <i class="fa-brands fa-x-twitter text-2xl lg:text-lg lg:w-5 transform group-hover:scale-110 transition-transform"></i> 
+                        <span class="hidden lg:inline group-hover:translate-x-1 transition-transform">X (Twitter)</span>
+                    </a>
+                    
+                    <a href="#" class="flex items-center gap-2 hover:text-emerald-400 transition-all duration-300 group">
+                        <i class="fa-brands fa-linkedin text-2xl lg:text-lg lg:w-5 transform group-hover:scale-110 transition-transform"></i> 
+                        <span class="hidden lg:inline group-hover:translate-x-1 transition-transform">LinkedIn</span>
+                    </a>
+
+                    <a href="#" class="flex items-center gap-2 hover:text-emerald-400 transition-all duration-300 group">
+                        <i class="fa-brands fa-tiktok text-2xl lg:text-lg lg:w-5 transform group-hover:scale-110 transition-transform"></i> 
+                        <span class="hidden lg:inline group-hover:translate-x-1 transition-transform">TikTok</span>
+                    </a>
+                    
+                </div>
+            </div>
+
+            <div class="col-span-1">
+                <h3 class="text-base lg:text-lg font-bold text-white mb-4">Get In Touch</h3>
+                
+                <div class="flex flex-row lg:flex-col gap-4 lg:gap-1.5">
+                    
+                    <a href="https://wa.me/255672743065" target="_blank" class="flex items-center gap-3 group cursor-pointer rounded lg:-ml-2 lg:p-2 lg:hover:bg-white/5 transition-all duration-300">
+                        <div class="w-10 h-10 lg:w-8 lg:h-8 rounded-lg bg-emerald-100 flex-shrink-0 flex items-center justify-center text-emerald-600 text-lg lg:text-sm shadow-md transform group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div class="hidden lg:block">
+                            <div class="text-[9px] font-bold text-emerald-500 uppercase tracking-wider">WhatsApp</div>
+                            <div class="text-white font-medium text-xs group-hover:text-emerald-400 transition-colors">(+255) 672 743 065</div>
+                        </div>
+                    </a>
+
+                    <a href="mailto:fpssatanzania@gmail.com" class="flex items-center gap-3 group cursor-pointer rounded lg:-ml-2 lg:p-2 lg:hover:bg-white/5 transition-all duration-300">
+                        <div class="w-10 h-10 lg:w-8 lg:h-8 rounded-lg bg-indigo-100 flex-shrink-0 flex items-center justify-center text-indigo-600 text-lg lg:text-sm shadow-md transform group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                        <div class="hidden lg:block">
+                            <div class="text-[9px] font-bold text-indigo-400 uppercase tracking-wider">Email Us</div>
+                            <div class="text-white font-medium text-xs group-hover:text-indigo-400 transition-colors">fpssatanzania@gmail.com</div>
+                        </div>
+                    </a>
+
+                    <div class="flex items-center gap-3 group rounded lg:-ml-2 lg:p-2 lg:hover:bg-white/5 transition-all duration-300">
+                        <div class="w-10 h-10 lg:w-8 lg:h-8 rounded-lg bg-teal-100 flex-shrink-0 flex items-center justify-center text-teal-600 text-lg lg:text-sm shadow-md transform group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="hidden lg:block">
+                            <div class="text-[9px] font-bold text-teal-400 uppercase tracking-wider">Location</div>
+                            <div class="text-white font-medium text-xs group-hover:text-teal-400 transition-colors">Mwanza, Tanzania</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
-    </footer>
-    
+
+        <div class="border-t border-white pt-8 text-center">
+            <p class="text-xs lg:text-sm text-white">&copy; 2026 FPSSA Tanzania. All rights reserved.</p>
+        </div>
+        
+    </div>
+</footer>
   
     <script src="script.js"></script>
 

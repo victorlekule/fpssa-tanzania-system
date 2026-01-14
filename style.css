@@ -1,0 +1,320 @@
+/*home section 2*/
+
+/* 1. Define the Fade In Up Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px); /* Start slightly lower */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End in original position */
+    }
+}
+
+/* 2. Base Class to Apply Animation */
+.animate-hero-content {
+    opacity: 0; /* Initially hidden */
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* 3. Stagger Delays (Controls the order of appearance) */
+.delay-100 {
+    animation-delay: 0.2s;
+}
+
+.delay-200 {
+    animation-delay: 0.4s;
+}
+
+.delay-300 {
+    animation-delay: 0.6s;
+}
+
+/*home section 2*/
+/* SCROLL REVEAL ANIMATION */
+
+/* The element starts hidden and shifted down */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+}
+
+/* When JavaScript adds this class, the element appears */
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Optional: Add a delay for the image side so it appears slightly after the text */
+.reveal-on-scroll.delay-200 {
+    transition-delay: 0.2s;
+}
+
+/*home section 3*/
+/* SCROLL REVEAL ANIMATION */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* DELAYS (So they don't all appear at once) */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+
+
+/*home section 4*/
+/* SCROLL REVEAL ANIMATION (Reused) */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* STAGGERED DELAYS */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+
+/* Ensure cards in grid have equal height for alignment */
+article {
+    display: flex;
+    flex-direction: column;
+}
+
+/*home section 5*/
+/* 1. THE INFINITE SCROLL ANIMATION */
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Move halfway. Since we duplicate the items, -50% is the exact start of the duplicate set. */
+        transform: translateX(-50%);
+    }
+}
+
+/* Apply animation to the track */
+.animate-scroll {
+    animation: scrollLeft 100s linear infinite; /* 60s = speed (Increase to make slower) */
+}
+
+/* Pause when hovering anywhere on the track */
+.hover\:pause-animation:hover {
+    animation-play-state: paused;
+}
+
+/* 2. CARD HOVER EFFECTS */
+.gallery-card {
+    transition: all 0.5s ease;
+}
+
+/* When hovering a specific card, scale it up */
+.gallery-card:hover {
+    transform: scale(1.1); /* Zoom effect */
+    z-index: 20; /* Bring to front */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* TEXT REVEAL */
+.gallery-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease-in-out;
+}
+
+/* Show text when card is hovered */
+.gallery-card:hover .gallery-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/*ABOUT US*/
+/*Hero Section 1 */
+/* Animation: Slide Up */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delays */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+
+
+/*hero section  2*/
+/* --- NEW CSS FOR ABOUT SECTION --- */
+
+/* 1. Hover Effects for the White Text Cards */
+.info-card:hover {
+    transform: translateY(-8px); /* Lifts up */
+    box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+    border-left-width: 8px; /* Thicker colored border on left */
+}
+
+/* 2. Hover Effect for the Dark Bottom Card */
+.info-card-dark:hover {
+    transform: translateY(-5px) scale(1.01); /* Slight lift and grow */
+    box-shadow: 0 25px 50px -12px rgba(16, 185, 129, 0.25); /* Greenish shadow glow */
+}
+
+/* 3. H3 Scaling Pulse Animation */
+@keyframes subtle-pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08); /* Scales up to 108% size */
+    }
+}
+
+.animate-scale-h3 {
+    display: inline-block; /* Required for transform to work on text */
+    /* Runs the pulse animation infinitely, taking 3 seconds per cycle */
+    animation: subtle-pulse 3s ease-in-out infinite; 
+}
+
+/* Ensure the container doesn't overflow during image transitions */
+#about-slideshow-container {
+    position: relative;
+    /* Ensure images stay contained */
+    z-index: 1; 
+}
+
+
+/*Hero section 2*/
+/* Scroll Reveal (Standard) */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delay Utilities */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+
+/* Optional: Smooth font rendering for the text */
+#mvv p {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* Hero section */
+
+/* Animation Base */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered Delays for the grid effect */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+
+/*Gallery section*/
+/* ================= CUSTOM GALLERY STYLES ================= */
+
+/* When a tab is active */
+.gallery-tab.active-tab {
+    background-color: #10b981 !important; /* Emerald-600 */
+    color: white !important;
+    box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.2), 0 2px 4px -1px rgba(16, 185, 129, 0.1);
+}
+
+/* Hiding gallery groups */
+.gallery-group.hidden {
+    display: none;
+}
+
+/* Animation for showing a group */
+.gallery-group {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/*Login */
+/* Page Load Fade */
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+@keyframes fadeInUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Spinner */
+@keyframes spin { to { transform: rotate(360deg); } }
+.fa-spin { animation: spin 1s linear infinite; }
+
+/* Shake Error Animation */
+.shake { animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both; }
+@keyframes shake {
+  10%, 90% { transform: translate3d(-1px, 0, 0); }
+  20%, 80% { transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+  40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+
+
+
+/* member dasbord*/
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Custom Scrollbar for better look */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9; 
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1; 
+    border-radius: 10px;
+}

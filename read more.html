@@ -135,91 +135,216 @@
 
     <!--hero-->
     
-   
-    <body class="bg-fpso-green font-sans">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPSSA - Member Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
 
-    <header class="bg-fpso-green py-4 shadow-lg">
-        <div class="container mx-auto px-6">
-            <h1 class="text-2xl font-bold text-white"><a href="news.html" class="hover:text-fp-secondary">
-                &larr; Back to News</a></h1>
+<body class="bg-gray-100 font-sans text-slate-800 h-screen overflow-hidden flex flex-col">
+
+    <header class="fixed top-0 left-0 w-full z-50 bg-white shadow-md h-20 flex items-center">
+        <div class="container mx-auto px-4 w-full relative flex justify-between md:justify-center items-center h-full">
+            
+            <div class="md:hidden flex items-center">
+                <img src="Picha/FPSSA LOGO 1.png" alt="FPSSA Logo" class="h-12 object-contain">
+            </div>
+
+            <button onclick="toggleSidebar()" class="md:hidden text-2xl text-slate-700 p-2 focus:outline-none hover:bg-gray-100 rounded-full">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+
+            <div class="hidden md:flex items-center gap-6">
+                <img src="Picha/Coat_of_arms_of_Tanzania.svg.png" alt="Coat of Arms" class="h-12 object-contain">
+                
+                <div class="text-center">
+                    <h2 class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">The United Republic of Tanzania</h2>
+                    <h1 class="text-sm font-extrabold text-slate-900 leading-tight">Federation of Procurement and Supplies<br>Student Association</h1>
+                </div>
+
+                <img src="Picha/FPSSA LOGO 1.png" alt="FPSSA Logo" class="h-12 object-contain">
+            </div>
+
+            <div class="hidden md:flex absolute right-4 items-center gap-3">
+                <div class="text-right">
+                    <p class="text-xs font-bold text-slate-900">Victor Lekule</p>
+                    <p class="text-[10px] text-emerald-600 font-bold bg-emerald-50 px-2 py-0.5 rounded-full inline-block">Active</p>
+                </div>
+                <div class="relative">
+                    <img src="Picha/download.png" class="w-10 h-10 rounded-full border-2 border-emerald-500 object-cover shadow-sm">
+                    <div class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-white rounded-full"></div>
+                </div>
+            </div>
+
         </div>
     </header>
 
-    <section class="py-12 md:py-16">
-        <div class="container mx-auto px-6 max-w-5xl">
 
-            <div class="mb-6 border-b pb-4">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-fpso-green mb-2 leading-tight">
-                    AI in Procurement: The Future is Now
-                </h2>
-                <p class="text-lg text-gray-500">
-                    Published on <span class="font-semibold">October 26, 2025</span> by FPSSA Communications
-                </p>
+    <div class="flex pt-20 h-full w-full"> 
+
+        <aside id="sidebar" class="fixed md:static top-20 left-0 w-64 bg-[#2c3e50] text-white h-[calc(100vh-80px)] transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-40 flex flex-col shadow-2xl overflow-y-auto">
+            
+            <div class="p-4 flex justify-between items-center md:hidden border-b border-gray-700">
+                <span class="text-sm font-bold text-gray-400 uppercase">Menu</span>
+                <button onclick="toggleSidebar()" class="text-white hover:text-red-400 transition">
+                    <i class="fa-solid fa-xmark text-2xl"></i>
+                </button>
             </div>
 
-            <div class="relative w-full h-96 overflow-hidden rounded-xl shadow-2xl mb-10 bg-gray-200">
-                <div id="image-carousel" class="w-full h-full relative">
+            <div class="p-4 flex-1">
+                <nav class="space-y-2 mt-2">
+                    <button onclick="switchTab('dashboard')" id="nav-dashboard" class="nav-item active w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all text-left">
+                        <i class="fa-solid fa-gauge-high w-5 text-center"></i> Dashboard
+                    </button>
                     
-                    <img src="Picha/study-group-learning-library.jpg" 
-                         alt="Seminar Group Photo" 
-                         class="carousel-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100"
-                         data-description="The opening ceremony with the FPSSA leadership and the guest speaker."
-                    >
+                    <button onclick="switchTab('events')" id="nav-events" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all text-left">
+                        <i class="fa-solid fa-calendar-check w-5 text-center"></i> Events
+                    </button>
                     
-                    <img src="Picha/digital-marketing-with-icons-business-people.jpg" 
-                         alt="Speaker presenting" 
-                         class="carousel-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0"
-                         data-description="Mr. John Doe presenting the latest trends in automated contract management."
-                    >
+                    <button onclick="switchTab('certificates')" id="nav-certificates" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all text-left">
+                        <i class="fa-solid fa-certificate w-5 text-center"></i> Certificates
+                    </button>
 
-                    <img src="Picha/online-marketing-branding-concept-laptop-screen.jpg" 
-                         alt="Student interaction" 
-                         class="carousel-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0"
-                         data-description="Students actively participating in a Q&A session on machine learning applications."
-                    >
-                    
-                    <img src="Picha/server-room-engineers-using-artificial-intelligence.jpg" 
-                         alt="Networking break" 
-                         class="carousel-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0"
-                         data-description="Informal networking break, connecting students with corporate attendees."
-                    >
+                    <button onclick="switchTab('payments')" id="nav-payments" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all text-left">
+                        <i class="fa-solid fa-credit-card w-5 text-center"></i> Payments
+                    </button>
+                </nav>
+            </div>
 
-                    <img src="Picha/study-group-learning-library.jpg" 
-                         alt="Certification moment" 
-                         class="carousel-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0"
-                         data-description="Closing remarks and certificate presentation to seminar attendees."
-                    >
+            <div class="p-4 border-t border-gray-600 bg-[#2c3e50]">
+                <button onclick="logout()" class="w-full flex items-center justify-center gap-2 py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-all font-bold text-sm shadow-md">
+                    <i class="fa-solid fa-power-off"></i> Logout
+                </button>
+            </div>
+        </aside>
+
+        <div id="sidebar-overlay" onclick="toggleSidebar()" class="fixed inset-0 bg-black/50 z-30 hidden md:hidden glass"></div>
+
+
+        <main class="flex-1 bg-[#f4f6f9] h-full overflow-y-auto relative w-full">
+            <div class="p-6 md:p-8 pb-24 max-w-7xl mx-auto">
+
+                <div id="view-dashboard" class="view-section animate-fade-in">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Dashboard Overview</h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                        <div class="bg-sky-500 text-white p-5 rounded-xl shadow-lg hover:-translate-y-1 transition transform">
+                            <h3 class="text-2xl font-bold">10,000 TZS</h3>
+                            <p class="text-xs uppercase opacity-80 mt-1">Unpaid Fees</p>
+                            <i class="fa-solid fa-wallet absolute top-5 right-5 text-white/20 text-3xl"></i>
+                        </div>
+                        <div class="bg-cyan-500 text-white p-5 rounded-xl shadow-lg hover:-translate-y-1 transition transform">
+                            <h3 class="text-2xl font-bold">3</h3>
+                            <p class="text-xs uppercase opacity-80 mt-1">Seminars</p>
+                            <i class="fa-solid fa-chalkboard-user absolute top-5 right-5 text-white/20 text-3xl"></i>
+                        </div>
+                        <div class="bg-amber-400 text-white p-5 rounded-xl shadow-lg hover:-translate-y-1 transition transform">
+                            <h3 class="text-2xl font-bold">0</h3>
+                            <p class="text-xs uppercase opacity-80 mt-1">Appeals</p>
+                            <i class="fa-solid fa-gavel absolute top-5 right-5 text-white/20 text-3xl"></i>
+                        </div>
+                        <div class="bg-rose-500 text-white p-5 rounded-xl shadow-lg hover:-translate-y-1 transition transform">
+                            <h3 class="text-2xl font-bold">Active</h3>
+                            <p class="text-xs uppercase opacity-80 mt-1">Status</p>
+                            <i class="fa-solid fa-user-check absolute top-5 right-5 text-white/20 text-3xl"></i>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 mb-8">
+                        <h3 class="text-lg font-bold text-gray-700 mb-4 border-b pb-2">Member Details</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <p class="text-xs font-bold text-gray-400 uppercase">Full Name</p>
+                                <p class="font-bold text-slate-800">Victor Lekule</p>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-gray-400 uppercase">Registration No.</p>
+                                <p class="font-bold text-slate-800">MZA/BPLM/22/107505</p>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-gray-400 uppercase">Institution</p>
+                                <p class="font-bold text-slate-800">TIA MWANZA</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <p id="image-caption" class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-3 text-sm font-light transition duration-500">
-                    The opening ceremony with the FPSSA leadership and the guest speaker.
-                </p>
-            </div>
-            
-            <div class="prose max-w-none text-gray-700">
-                <p>
-                    FPSSA hosted a groundbreaking seminar exploring the impact of Artificial Intelligence on modern procurement practices, featuring insights from leading industry experts. This full-day event was designed to equip our members with the foresight needed to navigate the technological shifts transforming supply chains globally.
-                </p>
-                
-                <h3 class="text-2xl font-bold text-fpso-green mt-6 mb-3">Keynote Highlights</h3>
-                <p>
-                    The keynote address, delivered by Dr. Elara Vance, focused on the ethical implementation of AI in automated sourcing decisions. Dr. Vance stressed that while AI offers unprecedented efficiency, the human element—particularly ethical oversight—remains paramount in the procurement lifecycle.
-                </p>
-                
-                <ul class="list-disc list-inside space-y-2 pl-4">
-                    <li>**Automated Negotiation:** Demonstrations showed how machine learning algorithms can manage low-value negotiations, freeing up procurement specialists for strategic tasks.</li>
-                    <li>**Risk Prediction:** Case studies illustrated the use of predictive analytics to preemptively identify supplier failures and geopolitical supply risks.</li>
-                    <li>**Sustainability Tracking:** New tools were presented that use AI to trace material origins and verify compliance with sustainability mandates instantly.</li>
-                </ul>
+                <div id="view-events" class="view-section hidden animate-fade-in">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Upcoming Events</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition border border-gray-200">
+                            <div class="h-2 bg-blue-600"></div>
+                            <div class="p-6">
+                                <span class="bg-blue-50 text-blue-700 text-xs font-bold px-2 py-1 rounded uppercase">Conference</span>
+                                <h3 class="font-bold text-lg text-slate-900 mt-2">PSPTB Annual 2025</h3>
+                                <p class="text-sm text-gray-500 mb-4 mt-1">Arusha International Center</p>
+                                <button class="w-full py-2 bg-slate-800 text-white text-sm font-bold rounded-lg hover:bg-slate-700">Register</button>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition border border-gray-200">
+                            <div class="h-2 bg-amber-500"></div>
+                            <div class="p-6">
+                                <span class="bg-amber-50 text-amber-700 text-xs font-bold px-2 py-1 rounded uppercase">Summit</span>
+                                <h3 class="font-bold text-lg text-slate-900 mt-2">FPSSA Summit</h3>
+                                <p class="text-sm text-gray-500 mb-4 mt-1">Dodoma Region</p>
+                                <button class="w-full py-2 bg-slate-800 text-white text-sm font-bold rounded-lg hover:bg-slate-700">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <h3 class="text-2xl font-bold text-fpso-green mt-6 mb-3">Student Impact</h3>
-                <p>
-                    Over 200 students attended, marking one of our most successful turnout rates this year. The feedback highlighted the practical value of the content, with many students immediately applying their learning in their academic projects. FPSSA is committed to keeping our community at the forefront of such critical industry advancements.
-                </p>
+                <div id="view-certificates" class="view-section hidden animate-fade-in">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">My Certificates</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center hover:shadow-md transition">
+                            <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fa-solid fa-file-pdf text-red-500 text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-800">AI in Procurement</h4>
+                            <p class="text-xs text-gray-400 mb-4">Issued: Oct 2025</p>
+                            <button class="text-blue-600 text-sm font-bold hover:underline">Download PDF</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="view-payments" class="view-section hidden animate-fade-in">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Payments</h2>
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <table class="w-full text-sm text-left">
+                            <thead class="bg-gray-100 text-gray-600 uppercase text-xs">
+                                <tr>
+                                    <th class="px-6 py-3">Description</th>
+                                    <th class="px-6 py-3">Amount</th>
+                                    <th class="px-6 py-3">Status</th>
+                                    <th class="px-6 py-3">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y">
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-6 py-4 font-medium">Annual Membership Renewal</td>
+                                    <td class="px-6 py-4 font-bold text-slate-900">10,000 TZS</td>
+                                    <td class="px-6 py-4"><span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-bold">Unpaid</span></td>
+                                    <td class="px-6 py-4"><button class="bg-blue-600 text-white px-3 py-1 rounded text-xs font-bold hover:bg-blue-700">Pay Now</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
             </div>
-        </div>
-    </section>
-   
+
+            <footer class="bg-white border-t border-gray-200 py-6 text-center mt-auto">
+                <p class="text-xs text-gray-500">&copy; 2026 FPSSA Tanzania. Powered by e-Government Authority.</p>
+            </footer>
+        </main>
+    </div>
+
 
 
         <!-- Footer -->
