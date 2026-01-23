@@ -14,204 +14,421 @@
 
 
 <!-- Header -->
-    <header id="site-header" class="shadow-lg fixed top-0 left-0 right-0 z-50">
+<header id="main-header" class="shadow-lg fixed top-0 left-0 w-full z-50 bg-white">
+        <div class="bg-white py-4 md:py-8">
+            <div class="container mx-auto px-4 md:px-6 flex items-center justify-between relative">
+                
+                <a href="#home" class="flex items-center space-x-3 flex-grow md:flex-grow-0">
+                    <img src="Picha/Coat_of_arms_of_Tanzania.svg.png" alt="Logo" class="h-8 w-8 sm:h-10 sm:w-10 object-contain">
+                </a>
 
-        <div class="bg-fpso-utility text-gray-700 border-b border-gray-200">
-            <div class="container mx-auto px-6 py-2 flex justify-between items-center text-xs sm:text-sm">
-                
-                <div class="space-x-4 hidden md:flex">
-                    <span class="flex items-center">📧 fpssatanzania@gmail.com</span>
-                    <span class="flex items-center">📍 Dodoma Tanzania</span>
-                </div>
-                
-                <div class="space-x-4 flex items-center ml-auto">
-                    <a href="#" class="hover:text-fpso-dark hidden sm:inline">Feedback</a>
-                    <a href="#" class="hover:text-fpso-dark hidden sm:inline">Resources</a>
-                    <div class="text-fpso-dark font-bold space-x-2">
-                        <a href="#" class="hover:underline">EN</a>
-                        <span>|</span>
-                        <a href="#" class="hover:underline text-gray-500">SW</a>
+                <div class="absolute left-1/2 transform -translate-x-1/2 text-center pointer-events-none px-2 z-20 w-full max-w-[60%] sm:max-w-none">
+                    <div class="text-[10px] sm:text-sm md:text-xl text-black leading-tight">
+                        The United Republic of Tanzania <br>
+                        <span class="block font-normal text-black text-[8px] sm:text-xs md:text-base">
+                            <b>Federation of Procurement and Supplies Student Association</b> </span>
+                        <span class="block font-normal text-black text-[8px] sm:text-xs md:text-base">
+                            <b>{FPSSA Tanzania }</b> </span>
                     </div>
                 </div>
+
+                <a href="#home" class="hidden sm:flex items-center space-x-3 flex-grow md:flex-grow-0">
+                    <img src="Picha/FPSSA LOGO 1.png" alt="Logo" class="h-8 w-8 sm:h-10 sm:w-10 object-contain">
+                </a>
+        
+                <button id="mobile-menu-toggle" class="md:hidden p-2 text-gray-600 hover:text-blue-900">
+                    <svg id="icon-open" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <svg id="icon-close" class="hidden w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
             </div>
         </div>
 
-        <div class="bg-white py-8">
-            <div class="container mx-auto px-6 flex items-center justify-between relative">
-                
-                <a href="#home" class="flex items-center space-x-3 flex-grow md:flex-grow-0">
-                    <img 
-                        src="Picha/Coat_of_arms_of_Tanzania.svg.png" 
-                        alt="FPSO Logo" 
-                        class="h-10 w-10 sm:h-10 sm:w-10 object-contain"
-                    >
-                </a>
-    
-
-                <!-- Centered header title -->
-                    <div class="absolute left-1/2 transform -translate-x-1/2 text-center pointer-events-none px-2 z-20">
-                        <div class="text-sm sm:text-xl text-gray-800 leading-tight">
-                            The United Republic of Tanzania
-                            <span class="block font-normal text-black text-xs sm:text-base">
-                                <b>Federation of Procurement and Supplies Student Association</b> </span>
-                                <span class="block font-normal text-black text-xs sm:text-base">
-                                <b>{FPSSA Tanzania }</b> </span>
-                        </div>
-                    </div>
-
-                                    <a href="#home" class="hidden sm:flex items-center space-x-3 flex-grow md:flex-grow-0">
-                                        <img 
-                                                src="Picha/FPSSA LOGO 1.png" 
-                                                alt="FPSO Logo" 
-                                                class="h-10 w-10 sm:h-10 sm:w-10 object-contain"
-                                        >
-                                </a>
-                
-                <button id="mobile-menu-toggle" class="md:hidden p-2 text-gray-600 hover:text-fpso-dark" title="Open mobile menu" aria-label="Open mobile menu">
-    
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-                            </div>
-        </div>
-
-        <nav class="bg-fpso-dark shadow-xl hidden md:block">
-            <div class="container mx-auto px-6 flex items-center justify-start h-12">
-                
-                <div class="flex space-x-6 text-white text-sm font-medium">
-                    <a href="index.html" class="hover:text-fpso-accent py-3 border-b-2 border-transparent hover:border-fpso-accent transition duration-200">Home</a>
-                    <a href="about.html" class="hover:text-fpso-accent py-3 flex items-center group">About Us <span class="ml-1 text-xs group-hover:text-fpso-accent"></span> </a>
-                    <a href="services.html" class="hover:text-fpso-accent py-3 flex items-center group"> Our Services <span class="ml-1 text-xs group-hover:text-fpso-accent"></span>  </a>
-                    <a href="gallery.html" class="hover:text-fpso-accent py-3">Gallery</a>
-                    <a href="club.html" class="hover:text-fpso-accent py-3">Club</a>
-                    <a href="news.html" class="hover:text-fpso-accent py-3 flex items-center group">News & Update <span class="ml-1 text-xs group-hover:text-fpso-accent"></span>                  </a>
-                    <a href="Job.html" class="hover:text-fpso-accent py-3 flex items-center group">Jobs <span class="ml-1 text-xs group-hover:text-fpso-accent"></span></a>
-                    <a href="contact.html" class="hover:text-fpso-accent py-3">Contact Us</a>
+        <nav class="bg-blue-900 shadow-xl hidden md:block">
+            <div class="container mx-auto px-4 md:px-6 flex items-center justify-between h-12">
+                <div class="flex space-x-2 lg:space-x-6 text-white text-[10px] lg:text-sm font-medium">
+                    <a href="Index.html" class="hover:text-yellow-400 py-3 transition">Home</a>
+                    <a href="about.html" class="hover:text-yellow-400 py-3 transition">About Us</a>
+                    <a href="services.html" class="hover:text-yellow-400 py-3 transition">Our Services</a>
+                    <a href="gallery.html" class="hover:text-yellow-400 py-3 transition">Gallery</a>
+                    <a href="club.html" class="hover:text-yellow-400 py-3 transition">Clubs</a>
+                    <a href="news.html" class="hover:text-yellow-400 py-3 transition">News & Update</a>
+                    <a href="Job.html" class="hover:text-yellow-400 py-3 transition">Jobs</a>
+                    <a href="contact.html" class="hover:text-yellow-400 py-3 transition">Contact Us</a>
                 </div>
-
-
-                <div class="ml-auto flex items-center space-x-4">
-                    <form action="#" method="GET" class="flex items-center space-x-2">
-                        <input type="search" placeholder="Search..." class="px-3 py-1.5 rounded-l-md text-gray-800 focus:outline-none focus:ring-1 focus:ring-fpso-accent w-40 md:w-56">
-                        <button type="submit" title="Search" class="bg-fpso-accent hover:bg-yellow-400 text-gray-900 px-3 py-1.5 rounded-r-md transition duration-200">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <div class="ml-auto flex items-center space-x-2 lg:space-x-4">
+                    <form action="#" method="GET" class="hidden lg:flex items-center space-x-2">
+                        <input type="search" placeholder="Search..." class="px-3 py-1.5 rounded-l-md text-gray-800 focus:outline-none w-32">
+                        <button type="submit" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-3 py-1.5 rounded-r-md">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                         </button>
                     </form>
-
-                    <div class="space-x-3 hidden md:flex">
-                    <a href="registation.html" id="reg-btn-desktop" class="px-4 py-2 bg-fpso-accent text-gray-900 font-semibold rounded-lg shadow-md hover:bg-yellow-400 transition duration-300 inline-block">  Register </a>
-                        <a href="login.html" id="login-btn-desktop" class="px-4 py-2 border border-indigo-200 bg-indigo-50 text-fpso-dark font-semibold rounded-lg hover:bg-indigo-100 transition duration-300 inline-block"> Login </a>
+                    <div class="space-x-2 flex">
+                        <a href="registation.html" class="px-2 lg:px-4 py-2 bg-yellow-400 text-gray-900 text-[10px] lg:text-sm font-semibold rounded hover:bg-yellow-300 transition">Register</a>
+                        <a href="login.html" class="px-2 lg:px-4 py-2 bg-white text-blue-900 text-[10px] lg:text-sm font-semibold rounded hover:bg-gray-100 transition">Login</a>
                     </div>
-
-                                
                 </div>
-                
-
-                </div>
-
             </div>
         </nav>
     </header>
 
-    <div id="mobile-menu-drawer" 
-         class="fixed inset-y-22 left-0 w-64 bg-fpso-dark text-white transform -translate-x-full transition duration-300 ease-in-out z-40 md:hidden overflow-y-auto">
-        
-        <div class="p-4 pt-8">    
-           <nav class="space-y-1">
-                <a href="index.html" class="block px-3 py-2 hover:bg-fpso-light/20">Home</a>
-                <a href="about.html" class="block px-3 py-2 hover:bg-fpso-light/20 flex justify-between items-center">About Us <span class="text-fpso-accent"></span></a>
-                <a href="services.html" class="block px-3 py-2 hover:bg-fpso-light/20 flex justify-between items-center">Our Services <span class="text-fpso-accent"></span></a>
-                <a href="gallery.html" class="block px-3 py-2 hover:bg-fpso-light/20">Gallery</a>
-                <a href="club.html" class="block px-3 py-2 hover:bg-fpso-light/20">Club</a>
-                <a href="news.html" class="block px-3 py-2 hover:bg-fpso-light/20 flex justify-between items-center">News & Update<span class="text-fpso-accent"></span></a>
-                <a href="Job.html" class="block px-3 py-2 hover:bg-fpso-light/20 flex justify-between items-center">Jobs <span class="text-fpso-accent"></span></a>
-                <a href="contact.html" class="block px-3 py-2 hover:bg-fpso-light/20">Contact </a>
+    <div id="mobile-menu-drawer" class="fixed left-0 z-40 bg-blue-900 w-max pr-10 rounded-br-lg shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+        <div class="p-6">
+            <nav class="flex flex-col space-y-6 text-left">
+                <a href="index.html" class="block text-white text-lg font-medium hover:text-yellow-400 transition-colors">Home</a>
+                <a href="about.html" class="block text-white text-lg font-medium hover:text-yellow-400 transition-colors">About Us</a>
+                <a href="services.html" class="block text-white text-lg font-medium hover:text-yellow-400 transition-colors">Our Services</a>
+                <a href="gallery.html" class="block text-white text-lg font-medium hover:text-yellow-400 transition-colors">Gallery</a>
+                <a href="club.html" class="block text-white text-lg font-medium hover:text-yellow-400 transition-colors">Clubs</a>
+                <a href="news.html" class="block text-white text-lg font-medium hover:text-yellow-400 transition-colors">News</a>
+                <a href="contact.html" class="block text-white text-lg font-medium hover:text-yellow-400 transition-colors">Contact Us</a>
+                
+                <div class="pt-4 flex flex-col space-y-4 w-40">
+                    <a href="registation.html" class="block w-full py-2 bg-yellow-400 text-gray-900 font-bold rounded text-center shadow">Register</a>
+                    <a href="login.html" class="block w-full py-2 border border-white text-white font-bold rounded text-center hover:bg-white hover:text-blue-900 transition">Login</a>
+                </div>
             </nav>
-            
-            <div class="mt-8 space-y-3">
-                <a href="registation.html" class="block w-full py-2 bg-fpso-accent text-gray-900 font-semibold rounded-lg text-center">Register</a>
-                <a href="login.html" class="block w-full py-2 border border-white text-white font-semibold rounded-lg text-center">Login</a>
-            </div>
         </div>
     </div>
+    <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden glass"></div>
+
+ <!--  end of Header -->
 
     <!--hero-->
-    <body class="bg-gray-100 font-sans">
+<style>
+    /* Card Animation */
+    .card-animate {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .card-animate.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
-    <header class="bg-fpso-green py-4 shadow-lg">
-        <div class="container mx-auto px-6">
-            <a href="club.html" class="text-sm text-white hover:text-psso-accent">&larr; Back to Clubs</a>
-            <h1 id="club-title" class="text-3xl font-bold text-white mt-1">Events for</h1>
+    /* Slideshow Fading */
+    .slide-image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+    }
+    .slide-image.active {
+        opacity: 1;
+    }
+
+    /* Scrollbar Styling for the Modal */
+    .modal-scroll::-webkit-scrollbar {
+        width: 8px;
+    }
+    .modal-scroll::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 4px;
+    }
+    .modal-scroll::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+    }
+</style>
+
+<section class="py-16 mt-10 min-h-screen bg-gray-100 pb-48 pt-48">
+    <div class="container mx-auto px-6 max-w-6xl relative z-20">
+
+        <div class="bg-white p-2 pl-6 rounded-full shadow-lg mb-16 flex items-center max-w-lg mx-auto transform hover:scale-105 transition duration-300 card-animate">
+            <i class="fa-solid fa-magnifying-glass text-gray-400 text-lg"></i>
+            <input type="text" id="event-search" placeholder="Search past events..." 
+                   class="w-full px-4 py-3 border-none rounded-full focus:ring-0 text-gray-800 bg-transparent outline-none text-lg">
+            <button class="bg-black text-white rounded-full w-12 h-12 flex items-center justify-center hover:bg-fpso-green transition">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
         </div>
-    </header>
+        
+        <div id="events-container" class="space-y-16">
 
-    <section class="py-12 md:py-16">
-        <div class="container mx-auto px-6 max-w-5xl">
+            <article class="club-event card-animate bg-white rounded-[2rem] shadow-xl overflow-hidden" data-keywords="tbl, brewery">
+                <div class="grid md:grid-cols-2 min-h-[500px]">
+                    
+                    <div class="p-8 md:p-12 flex flex-col justify-center order-2 md:order-1">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                                Completed
+                            </span>
+                            <span class="text-gray-400 text-sm font-semibold">Feb 10, 2024</span>
+                        </div>
 
-            <div class="max-w-md mx-auto mb-10">
-                <input type="text" id="event-search" placeholder="Search events by title or keyword..." 
-                       class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-psso-primary focus:border-psso-primary text-gray-700">
-            </div>
+                        <h3 class="text-3xl font-extrabold text-gray-900 mb-4 leading-tight">
+                            Industrial Visit to TBL
+                        </h3>
+
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-8 h-8 rounded-full bg-fpso-green text-white flex items-center justify-center">
+                                <i class="fa-solid fa-map-location-dot text-xs"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-gray-800">Tanzania Breweries Ltd</p>
+                                <p class="text-xs text-gray-500">Mwanza Plant</p>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-600 mb-6 line-clamp-3">
+                            An intensive academic tour focusing on supply chain management and production logistics. Students witnessed the entire bottling process...
+                        </p>
+
+                        <button onclick="openModal('modal-1')" class="mt-auto self-start group flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full hover:bg-fpso-green transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            <span>Read Full Report</span>
+                            <i class="fa-solid fa-book-open text-xs group-hover:animate-pulse"></i>
+                        </button>
+                    </div>
+
+                    <div class="relative h-full min-h-[300px] bg-gray-900 overflow-hidden image-slider order-1 md:order-2">
+                        <img src="Picha/1.jpeg" class="slide-image active" alt="TBL 1">
+                        <img src="Picha/2.jpeg" class="slide-image" alt="TBL 2">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <p class="font-bold text-lg"><i class="fa-solid fa-camera mr-2"></i> Gallery</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="club-event card-animate bg-white rounded-[2rem] shadow-xl overflow-hidden" data-keywords="port, logistics">
+                <div class="grid md:grid-cols-2 min-h-[500px]">
+                    
+                    <div class="relative h-full min-h-[300px] bg-gray-900 overflow-hidden image-slider order-1 md:order-1">
+                        <img src="Picha/3.jpeg" class="slide-image active" alt="Port 1">
+                        <img src="Picha/1.jpeg" class="slide-image" alt="Port 2">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <p class="font-bold text-lg"><i class="fa-solid fa-camera mr-2"></i> Gallery</p>
+                        </div>
+                    </div>
+
+                    <div class="p-8 md:p-12 flex flex-col justify-center order-2 md:order-2">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                                Completed
+                            </span>
+                            <span class="text-gray-400 text-sm font-semibold">Mar 15, 2024</span>
+                        </div>
+
+                        <h3 class="text-3xl font-extrabold text-gray-900 mb-4 leading-tight">
+                            Marine Logistics Study
+                        </h3>
+
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center">
+                                <i class="fa-solid fa-anchor text-xs"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-gray-800">Mwanza Port Authority</p>
+                                <p class="text-xs text-gray-500">Lake Terminal</p>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-600 mb-6 line-clamp-3">
+                            A practical session on cargo handling, customs clearance, and warehouse management. This tour bridged the gap between classroom theory and reality...
+                        </p>
+
+                        <button onclick="openModal('modal-2')" class="mt-auto self-start group flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            <span>Read Full Report</span>
+                            <i class="fa-solid fa-book-open text-xs group-hover:animate-pulse"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </article>
             
-            <div id="events-container" class="space-y-12">
+        </div>
+    </div>
+</section>
 
-                <div class="club-event bg-white p-6 rounded-xl shadow-2xl border-l-8 border-psso-primary" data-keywords="gala, annual, awards, networking, 2024">
-                    <h3 class="text-3xl font-bold text-fpso-green">2024 Annual Networking Gala</h3>
-                    <p class="text-fpso-dark mb-4">
-                        <i class="fa-solid fa-calendar-day"></i>
-                        November 15, 2024</p>
-                    
-                    <p class="text-gray-700 mb-6">
-                        The highlight of the year! Our Annual Gala brought together students, faculty, and industry leaders for a night of awards, mentorship matching, and crucial networking opportunities. This year featured a keynote on ethical sourcing from the CEO of Global SCM.
-                    </p>
-
-                    <h4 class="text-xl font-semibold text-psso-primary mb-4">Image of an Event</h4>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-                        <div class="gallery-item bg-gray-200 rounded-lg shadow-inner overflow-hidden flex items-center justify-center text-xs text-gray-600">
-                            <img src="Picha/1.jpeg" alt="Gala Photo 1" class="w-full h-full object-cover">
-                        </div>
-                        <div class="gallery-item bg-gray-200 rounded-lg shadow-inner overflow-hidden flex items-center justify-center text-xs text-gray-600">
-                            <img src="Picha/2.jpeg" alt="Gala Photo 2" class="w-full h-full object-cover">
-                        </div>
-                        <div class="gallery-item bg-gray-200 rounded-lg shadow-inner flex items-center justify-center text-xs text-gray-600"><img src="Picha/2.jpeg" alt="Gala Photo 2" class="w-full h-full object-cover"></div>
-                        <div class="gallery-item bg-gray-200 rounded-lg shadow-inner flex items-center justify-center text-xs text-gray-600"><img src="Picha/1.jpeg" alt="Gala Photo 2" class="w-full h-full object-cover"></div>
-                        <div class="gallery-item bg-gray-200 rounded-lg shadow-inner flex items-center justify-center text-xs text-gray-600"><img src="Picha/2.jpeg" alt="Gala Photo 2" class="w-full h-full object-cover"></div>
-                        <div class="gallery-item bg-gray-200 rounded-lg shadow-inner flex items-center justify-center text-xs text-gray-600"><img src="Picha/1.jpeg" alt="Gala Photo 2" class="w-full h-full object-cover"></div>
-                        <div class="gallery-item bg-gray-200 rounded-lg shadow-inner flex items-center justify-center text-xs text-gray-600"><img src="Picha/3.jpeg" alt="Gala Photo 2" class="w-full h-full object-cover"></div>
-                        <div class="gallery-item bg-gray-200 rounded-lg shadow-inner flex items-center justify-center text-xs text-gray-600"><img src="Picha/2.jpeg" alt="Gala Photo 2" class="w-full h-full object-cover"></div>
-                        <div class="gallery-item bg-gray-200 rounded-lg shadow-inner flex items-center justify-center text-xs text-gray-600"><img src="Picha/2.jpeg" alt="Gala Photo 2" class="w-full h-full object-cover"></div>
-                        <div class="gallery-item bg-gray-200 rounded-lg shadow-inner flex items-center justify-center text-xs text-gray-600"><img src="Picha/3.jpeg" alt="Gala Photo 2" class="w-full h-full object-cover"></div>
-                    </div>
-                </div>
-                
-                <hr class="border-t-2 border-psso-accent">
-
-                <div class="club-event bg-white p-6 rounded-xl shadow-2xl border-l-8 border-psso-primary" data-keywords="workshop, green, sustainability, environment, 2024">
-                    <h3 class="text-3xl font-bold text-fpso-green"> Green Procurement Workshop</h3>
-                    <p class="text-fpso-dark mb-4">
-                        <i class="fa-solid fa-calendar-day"></i>
-                        March 20, 2024</p>
-                    
-                    <p class="text-gray-700 mb-6">
-                        A focused, practical session on developing sustainable supply chains. Members learned how to evaluate suppliers based on environmental and social criteria.
-                    </p>
-
-                    <h4 class="text-xl font-semibold text-psso-primary mb-4">Gallery (10 Images)</h4>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-                        <div class="gallery-item bg-gray-200 rounded-lg shadow-inner flex items-center justify-center text-xs text-gray-600"><img src="Picha/3.jpeg" alt="Gala Photo 2" class="w-full h-full object-cover"></div>
-                        <div class="gallery-item bg-gray-200 rounded-lg shadow-inner flex items-center justify-center text-xs text-gray-600"><img src="Picha/1.jpeg" alt="Gala Photo 2" class="w-full h-full object-cover"></div>
-                    </div>
-                </div>
-
-                <div id="no-events" class="hidden text-center py-10 text-gray-500">
-                    <p class="text-xl">No events match your current search.</p>
-                </div>
-                
+<div id="modal-1" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 transition-opacity opacity-0 pointer-events-none" style="transition: opacity 0.3s;">
+    <div class="bg-white rounded-3xl w-full max-w-4xl max-h-[90vh] overflow-hidden flex flex-col shadow-2xl transform scale-95 transition-transform duration-300" id="modal-content-1">
+        
+<div class="h-48 bg-gray-900 relative flex-shrink-0">
+            <img src="Picha/1.jpeg" class="w-full h-full object-cover opacity-80">
+            <button onclick="closeModal('modal-1')" class="absolute top-4 right-4 bg-white/20 hover:bg-white text-white hover:text-black w-10 h-10 rounded-full flex items-center justify-center transition backdrop-blur-md">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="absolute bottom-4 left-6 text-white">
+                <h2 class="text-3xl font-bold">Industrial Visit Report</h2>
+                <p class="opacity-90">Tanzania Breweries Ltd</p>
             </div>
         </div>
-    </section>
-    
 
-   
+        <div class="p-8 overflow-y-auto modal-scroll bg-white">
+            <div class="flex gap-4 mb-6 border-b border-gray-100 pb-6">
+                <div class="flex-1 bg-gray-50 p-4 rounded-xl text-center">
+                    <p class="text-xs text-gray-500 uppercase font-bold">Date</p>
+                    <p class="font-bold text-gray-800">Feb 10, 2024</p>
+                </div>
+                <div class="flex-1 bg-gray-50 p-4 rounded-xl text-center">
+                    <p class="text-xs text-gray-500 uppercase font-bold">Attendees</p>
+                    <p class="font-bold text-gray-800">45 Students</p>
+                </div>
+                <div class="flex-1 bg-gray-50 p-4 rounded-xl text-center">
+                    <p class="text-xs text-gray-500 uppercase font-bold">Focus</p>
+                    <p class="font-bold text-gray-800">Logistics</p>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Detailed Overview</h3>
+            <p class="text-gray-600 mb-4 leading-relaxed">
+                The Procurement and Supply Chain Management Organization (PSSO) organized an industrial visit to Tanzania Breweries Limited (TBL) Mwanza plant. The primary objective was to bridge the gap between theoretical knowledge and practical application in the field of supply chain and logistics.
+            </p>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+                During the visit, students were exposed to the intricate details of:
+                <br>• Raw material sourcing and quality control.
+                <br>• Inventory management systems used in large-scale manufacturing.
+                <br>• The automated bottling and packaging process.
+                <br>• Distribution logistics across the Lake Zone.
+            </p>
+
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Key Takeaways</h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-2 mb-8">
+                <li>Understanding the importance of JIT (Just-In-Time) inventory.</li>
+                <li>Safety protocols in industrial warehousing.</li>
+                <li>The role of sustainability in modern supply chains.</li>
+            </ul>
+
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg">
+                <p class="text-sm text-yellow-800 font-semibold">
+                    <i class="fa-solid fa-circle-info mr-2"></i> Note: Certificates of participation for this tour are available at the club office.
+                </p>
+            </div>
+        </div>
+        
+        <div class="p-4 border-t border-gray-100 bg-gray-50 flex justify-end">
+            <button onclick="closeModal('modal-1')" class="px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-bold hover:bg-gray-300 transition">
+                Close Report
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div id="modal-2" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 transition-opacity opacity-0 pointer-events-none" style="transition: opacity 0.3s;">
+    <div class="bg-white rounded-3xl w-full max-w-4xl max-h-[90vh] overflow-hidden flex flex-col shadow-2xl transform scale-95 transition-transform duration-300" id="modal-content-2">
+        
+<div class="h-48 bg-gray-900 relative flex-shrink-0">
+            <img src="Picha/3.jpeg" class="w-full h-full object-cover opacity-80">
+            <button onclick="closeModal('modal-2')" class="absolute top-4 right-4 bg-white/20 hover:bg-white text-white hover:text-black w-10 h-10 rounded-full flex items-center justify-center transition backdrop-blur-md">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="absolute bottom-4 left-6 text-white">
+                <h2 class="text-3xl font-bold">Field Study Report</h2>
+                <p class="opacity-90">Mwanza Port Authority</p>
+            </div>
+        </div>
+
+        <div class="p-8 overflow-y-auto modal-scroll bg-white">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Event Summary</h3>
+            <p class="text-gray-600 mb-4 leading-relaxed">
+                This tour focused on the marine logistics sector. Students toured the Lake Victoria terminal to understand how goods are received, inspected, and cleared for entry into the country.
+            </p>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+                The Port Manager gave a detailed lecture on:
+                <br>• Customs documentation (T1, T10 forms).
+                <br>• Container yard management.
+                <br>• Challenges in marine transport logistics.
+            </p>
+             <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                <p class="text-sm text-blue-800 font-semibold">
+                    <i class="fa-solid fa-star mr-2"></i> Highlight: Students got to see the loading of the MV Mwanza.
+                </p>
+            </div>
+        </div>
+         <div class="p-4 border-t border-gray-100 bg-gray-50 flex justify-end">
+            <button onclick="closeModal('modal-2')" class="px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-bold hover:bg-gray-300 transition">
+                Close Report
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    // --- 1. MODAL LOGIC ---
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        const content = modal.querySelector('div[id^="modal-content"]');
+        modal.classList.remove('hidden', 'pointer-events-none');
+        setTimeout(() => {
+            modal.classList.remove('opacity-0');
+            content.classList.remove('scale-95');
+            content.classList.add('scale-100');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        const content = modal.querySelector('div[id^="modal-content"]');
+        modal.classList.add('opacity-0');
+        content.classList.remove('scale-100');
+        content.classList.add('scale-95');
+        setTimeout(() => {
+            modal.classList.add('hidden', 'pointer-events-none');
+            document.body.style.overflow = '';
+        }, 300);
+    }
+    
+    // Close on click outside
+    window.onclick = function(event) {
+        if (event.target.id.includes('modal-')) {
+            closeModal(event.target.id);
+        }
+    }
+
+    // --- 2. ANIMATION & SLIDESHOW LOGIC ---
+    document.addEventListener("DOMContentLoaded", function() {
+        
+        // Scroll Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.card-animate').forEach(el => observer.observe(el));
+
+        // GLOBAL SLIDESHOW (Works for Cards AND Modals)
+        const sliders = document.querySelectorAll('.image-slider');
+        sliders.forEach((slider) => {
+            const slides = slider.querySelectorAll('.slide-image');
+            let currentSlide = 0;
+            if(slides.length > 1) {
+                setInterval(() => {
+                    slides[currentSlide].classList.remove('active');
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    slides[currentSlide].classList.add('active');
+                }, 4000); // 4 seconds
+            }
+        });
+        
+        // Search
+        const searchInput = document.getElementById('event-search');
+        if(searchInput) {
+            searchInput.addEventListener('keyup', (e) => {
+                const term = e.target.value.toLowerCase();
+                document.querySelectorAll('.club-event').forEach(event => {
+                    const text = event.innerText.toLowerCase();
+                    event.style.display = text.includes(term) ? 'block' : 'none';
+                });
+            });
+        }
+    });
+</script>
+
+
+
+
 
 
         <!-- Footer -->

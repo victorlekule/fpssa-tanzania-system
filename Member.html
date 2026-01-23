@@ -81,6 +81,9 @@
                     <button onclick="switchTab('payments')" id="nav-payments" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all text-left">
                         <i class="fa-solid fa-credit-card w-5 text-center"></i> Payments
                     </button>
+                    <button onclick="switchTab('training')" id="nav-training" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all text-left">
+                        <i class="fa-solid fa-laptop-file w-5 text-center"></i> NeST Training
+                    </button>
                 </nav>
             </div>
 
@@ -363,6 +366,124 @@
                     </div>
                 </div>
 
+                <div id="view-training" class="view-section hidden animate-fade-in">
+                    <div class="flex justify-between items-center mb-6">
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-800">NeST System Training</h2>
+                            <p class="text-sm text-gray-500">Video tutorials for the National e-Procurement System</p>
+                        </div>
+                        <button class="bg-emerald-600 text-white px-4 py-2 rounded-lg text-xs font-bold hover:bg-emerald-700">
+                            <i class="fa-solid fa-download mr-1"></i> User Manual
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition group">
+                            <div class="relative h-40 bg-slate-800 flex items-center justify-center cursor-pointer overflow-hidden" onclick="openVideoModal('How to Register as a Supplier')">
+                                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition z-10"></div>
+                                <img src="https://img.youtube.com/vi/placeholder/hqdefault.jpg" class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Thumbnail">
+                                <i class="fa-solid fa-circle-play text-5xl text-white z-20 shadow-xl group-hover:scale-110 transition"></i>
+                                <span class="absolute bottom-2 right-2 bg-black/70 text-white text-[10px] px-1.5 rounded z-20">05:20</span>
+                            </div>
+                            <div class="p-5">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="bg-blue-100 text-blue-700 text-[10px] font-bold px-2 py-0.5 rounded uppercase">Registration</span>
+                                </div>
+                                <h3 class="font-bold text-slate-800 leading-tight mb-2">How to Register as a Supplier</h3>
+                                <p class="text-xs text-gray-500 mb-4">Step-by-step guide on creating a supplier account, uploading documents, and verification.</p>
+                                <button onclick="openVideoModal('How to Register as a Supplier')" class="w-full py-2 border border-slate-200 text-slate-700 text-sm font-bold rounded hover:bg-slate-50 transition">Watch Tutorial</button>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition group">
+                            <div class="relative h-40 bg-slate-800 flex items-center justify-center cursor-pointer overflow-hidden" onclick="openVideoModal('Register as Organization (PE)')">
+                                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition z-10"></div>
+                                <i class="fa-solid fa-building-columns text-5xl text-gray-400 opacity-20 absolute"></i>
+                                <i class="fa-solid fa-circle-play text-5xl text-white z-20 shadow-xl group-hover:scale-110 transition"></i>
+                                <span class="absolute bottom-2 right-2 bg-black/70 text-white text-[10px] px-1.5 rounded z-20">08:15</span>
+                            </div>
+                            <div class="p-5">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="bg-blue-100 text-blue-700 text-[10px] font-bold px-2 py-0.5 rounded uppercase">Admin</span>
+                                </div>
+                                <h3 class="font-bold text-slate-800 leading-tight mb-2">Register as Organization (PE)</h3>
+                                <p class="text-xs text-gray-500 mb-4">For Procuring Entities: Setting up the organization profile and assigning user roles.</p>
+                                <button onclick="openVideoModal('Register as Organization (PE)')" class="w-full py-2 border border-slate-200 text-slate-700 text-sm font-bold rounded hover:bg-slate-50 transition">Watch Tutorial</button>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition group">
+                            <div class="relative h-40 bg-slate-800 flex items-center justify-center cursor-pointer overflow-hidden" onclick="openVideoModal('How to Find Advertised Tenders')">
+                                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition z-10"></div>
+                                <i class="fa-solid fa-magnifying-glass text-5xl text-gray-400 opacity-20 absolute"></i>
+                                <i class="fa-solid fa-circle-play text-5xl text-white z-20 shadow-xl group-hover:scale-110 transition"></i>
+                                <span class="absolute bottom-2 right-2 bg-black/70 text-white text-[10px] px-1.5 rounded z-20">03:45</span>
+                            </div>
+                            <div class="p-5">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="bg-amber-100 text-amber-700 text-[10px] font-bold px-2 py-0.5 rounded uppercase">Bidding</span>
+                                </div>
+                                <h3 class="font-bold text-slate-800 leading-tight mb-2">How to Look for Tenders</h3>
+                                <p class="text-xs text-gray-500 mb-4">Learn to use search filters, categories, and notifications to find relevant opportunities.</p>
+                                <button onclick="openVideoModal('How to Find Advertised Tenders')" class="w-full py-2 border border-slate-200 text-slate-700 text-sm font-bold rounded hover:bg-slate-50 transition">Watch Tutorial</button>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition group">
+                            <div class="relative h-40 bg-slate-800 flex items-center justify-center cursor-pointer overflow-hidden" onclick="openVideoModal('How to Advertise a Tender')">
+                                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition z-10"></div>
+                                <i class="fa-solid fa-bullhorn text-5xl text-gray-400 opacity-20 absolute"></i>
+                                <i class="fa-solid fa-circle-play text-5xl text-white z-20 shadow-xl group-hover:scale-110 transition"></i>
+                                <span class="absolute bottom-2 right-2 bg-black/70 text-white text-[10px] px-1.5 rounded z-20">06:30</span>
+                            </div>
+                            <div class="p-5">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="bg-purple-100 text-purple-700 text-[10px] font-bold px-2 py-0.5 rounded uppercase">Procurement</span>
+                                </div>
+                                <h3 class="font-bold text-slate-800 leading-tight mb-2">How to Advertise a Tender</h3>
+                                <p class="text-xs text-gray-500 mb-4">Creating a tender notice, uploading documents, and publishing to the public portal.</p>
+                                <button onclick="openVideoModal('How to Advertise a Tender')" class="w-full py-2 border border-slate-200 text-slate-700 text-sm font-bold rounded hover:bg-slate-50 transition">Watch Tutorial</button>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition group">
+                            <div class="relative h-40 bg-slate-800 flex items-center justify-center cursor-pointer overflow-hidden" onclick="openVideoModal('How to Open a Tender')">
+                                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition z-10"></div>
+                                <i class="fa-solid fa-folder-open text-5xl text-gray-400 opacity-20 absolute"></i>
+                                <i class="fa-solid fa-circle-play text-5xl text-white z-20 shadow-xl group-hover:scale-110 transition"></i>
+                                <span class="absolute bottom-2 right-2 bg-black/70 text-white text-[10px] px-1.5 rounded z-20">04:10</span>
+                            </div>
+                            <div class="p-5">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="bg-purple-100 text-purple-700 text-[10px] font-bold px-2 py-0.5 rounded uppercase">Procurement</span>
+                                </div>
+                                <h3 class="font-bold text-slate-800 leading-tight mb-2">How to Open a Tender</h3>
+                                <p class="text-xs text-gray-500 mb-4">Procedures for the tender opening ceremony, decrypting bids, and generating opening reports.</p>
+                                <button onclick="openVideoModal('How to Open a Tender')" class="w-full py-2 border border-slate-200 text-slate-700 text-sm font-bold rounded hover:bg-slate-50 transition">Watch Tutorial</button>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition group">
+                            <div class="relative h-40 bg-slate-800 flex items-center justify-center cursor-pointer overflow-hidden" onclick="openVideoModal('How to Evaluate a Tender')">
+                                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition z-10"></div>
+                                <i class="fa-solid fa-check-double text-5xl text-gray-400 opacity-20 absolute"></i>
+                                <i class="fa-solid fa-circle-play text-5xl text-white z-20 shadow-xl group-hover:scale-110 transition"></i>
+                                <span class="absolute bottom-2 right-2 bg-black/70 text-white text-[10px] px-1.5 rounded z-20">12:45</span>
+                            </div>
+                            <div class="p-5">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="bg-purple-100 text-purple-700 text-[10px] font-bold px-2 py-0.5 rounded uppercase">Procurement</span>
+                                </div>
+                                <h3 class="font-bold text-slate-800 leading-tight mb-2">How to Evaluate a Tender</h3>
+                                <p class="text-xs text-gray-500 mb-4">Conducting technical and financial evaluations, scoring, and approval workflows.</p>
+                                <button onclick="openVideoModal('How to Evaluate a Tender')" class="w-full py-2 border border-slate-200 text-slate-700 text-sm font-bold rounded hover:bg-slate-50 transition">Watch Tutorial</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
 
             <footer class="bg-white border-t border-gray-200 py-6 text-center mt-auto">
@@ -499,6 +620,44 @@
         </div>
     </div>
 
+<div id="videoModal" class="hidden fixed inset-0 z-[70] overflow-y-auto">
+    <div class="fixed inset-0 bg-black bg-opacity-95 transition-opacity" onclick="closeModal('videoModal')"></div>
+    
+    <div class="flex min-h-full items-center justify-center p-2 md:p-4">
+        <div id="videoModalContainer" class="relative bg-black rounded-xl shadow-2xl w-full max-w-4xl transition-all duration-500 ease-in-out border border-gray-800 flex flex-col">
+            
+            <div class="flex justify-between items-center p-4 border-b border-gray-800 bg-gray-900 rounded-t-xl">
+                <h3 class="text-lg font-bold text-white truncate pr-4" id="videoTitle">Tutorial Video</h3>
+                
+                <div class="flex items-center gap-3">
+                    <button onclick="toggleVideoSize()" class="hidden md:flex items-center gap-2 text-gray-400 hover:text-white bg-gray-800 hover:bg-gray-700 px-3 py-1.5 rounded-lg text-xs font-bold transition">
+                        <i id="resizeIcon" class="fa-solid fa-expand"></i>
+                        <span id="resizeText">Theater Mode</span>
+                    </button>
+
+                    <button onclick="closeModal('videoModal')" class="text-gray-400 hover:text-red-500 transition">
+                        <i class="fa-solid fa-xmark text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="videoPlayerWrapper" class="aspect-video bg-black flex items-center justify-center relative w-full">
+                
+                <div class="text-center">
+                    <i class="fa-brands fa-youtube text-red-600 text-6xl mb-4 animate-pulse"></i>
+                    <p class="text-gray-400">Loading Video Stream...</p>
+                </div>
+                
+                </div>
+
+            <div class="p-4 bg-gray-900 text-gray-400 text-xs flex justify-between rounded-b-xl border-t border-gray-800">
+                <span><i class="fa-solid fa-circle-info mr-2"></i> NeST System Training Series</span>
+                <button class="hover:text-white transition"><i class="fa-solid fa-share-nodes mr-1"></i> Share</button>
+            </div>
+        </div>
+    </div>
+</div>
+
     <script>
         // Sidebar Toggle
         function toggleSidebar() {
@@ -587,6 +746,50 @@
         document.addEventListener('DOMContentLoaded', () => {
             switchTab('dashboard'); 
         });
+
+// NEST VIDEO SIZE//
+let isFullSize = false;
+
+function toggleVideoSize() {
+    const container = document.getElementById('videoModalContainer');
+    const icon = document.getElementById('resizeIcon');
+    const text = document.getElementById('resizeText');
+
+    if (!isFullSize) {
+        // Switch to FULL SIZE
+        container.classList.remove('max-w-4xl'); // Remove Mid size
+        container.classList.add('max-w-[95%]', 'h-[90vh]'); // Add Full size (almost full screen)
+        
+        // Update Icon/Text
+        icon.classList.remove('fa-expand');
+        icon.classList.add('fa-compress');
+        text.innerText = "Exit Theater";
+        
+        isFullSize = true;
+    } else {
+        // Switch back to MID SIZE
+        container.classList.remove('max-w-[95%]', 'h-[90vh]'); // Remove Full size
+        container.classList.add('max-w-4xl'); // Add Mid size
+        
+        // Update Icon/Text
+        icon.classList.remove('fa-compress');
+        icon.classList.add('fa-expand');
+        text.innerText = "Theater Mode";
+        
+        isFullSize = false;
+    }
+}
+
+// Update the existing openVideoModal function to reset size when opening
+function openVideoModal(title) {
+    document.getElementById('videoTitle').innerText = title;
+    
+    // Reset to mid size every time we open a new video
+    isFullSize = true; // Set true so the toggle function flips it to false (default)
+    toggleVideoSize(); 
+    
+    document.getElementById('videoModal').classList.remove('hidden');
+}
     </script>
 </body>
 </html>
