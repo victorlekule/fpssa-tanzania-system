@@ -345,34 +345,95 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //gallery script//
 
-document.addEventListener('DOMContentLoaded', function() {
+// 1. INITIALIZE FANCYBOX (Fixes the close button issue)
+// This tells Fancybox to look for elements with 'data-fancybox' attribute
+try {
+    Fancybox.bind("[data-fancybox]", {
+        // Custom options can go here
+        thumbs: false,
+        Toolbar: {
+            display: {
+                left: [],
+                middle: [],
+                right: ["close"],
+            },
+        },
+    });
+} catch (e) {
+    console.error("Fancybox failed to load. Check internet connection or CDN link.");
+}
+
+// 2. MOBILE MENU LOGIC
+document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('mobile-menu-toggle');
+    const drawer = document.getElementById('mobile-menu-drawer');
+    const overlay = document.getElementById('menu-overlay');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+
+    if (btn && drawer && overlay) {
+        btn.addEventListener('click', () => {
+            drawer.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+            
+            // Toggle icons
+            if (iconOpen && iconClose) {
+                iconOpen.classList.toggle('hidden');
+                iconClose.classList.toggle('hidden');
+            }
+        });
+
+        // Close menu when clicking overlay
+        overlay.addEventListener('click', () => {
+            drawer.classList.add('-translate-x-full');
+            overlay.classList.add('hidden');
+            if (iconOpen && iconClose) {
+                iconOpen.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+            }
+        });
+    }
+});
+
+// 3. GALLERY FILTER LOGIC
+document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.gallery-tab');
     
-    // ================= GALLERY TAB LOGIC =================
-    const galleryTabs = document.querySelectorAll('.gallery-tab');
-    const galleryGroups = document.querySelectorAll('.gallery-group');
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const year = tab.getAttribute('data-year');
+            
+            // Remove active class from all tabs
+            tabs.forEach(t => {
+                t.classList.remove('bg-emerald-600', 'text-white', 'shadow-md', 'active-tab');
+                t.classList.add('bg-white', 'text-gray-700', 'hover:bg-gray-100');
+            });
 
-    galleryTabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-            // 1. Deactivate all tabs
-            galleryTabs.forEach(t => t.classList.remove('active-tab', 'bg-emerald-600', 'text-white'));
-            galleryTabs.forEach(t => t.classList.add('bg-white', 'text-gray-700'));
+            // Add active class to clicked tab
+            tab.classList.remove('bg-white', 'text-gray-700', 'hover:bg-gray-100');
+            tab.classList.add('bg-emerald-600', 'text-white', 'shadow-md', 'active-tab');
 
-            // 2. Activate clicked tab
-            this.classList.remove('bg-white', 'text-gray-700');
-            this.classList.add('active-tab', 'bg-emerald-600', 'text-white');
+            // Hide all gallery groups
+            const groups = document.querySelectorAll('.gallery-group');
+            groups.forEach(group => {
+                group.classList.add('hidden');
+            });
 
-            // 3. Hide all groups
-            galleryGroups.forEach(group => group.classList.add('hidden'));
-
-            // 4. Show the selected group
-            const year = this.getAttribute('data-year');
-            const targetGroup = document.getElementById(`group-${year}`);
-            if (targetGroup) {
-                targetGroup.classList.remove('hidden');
+            // Show selected group
+            const selectedGroup = document.getElementById('group-' + year);
+            if (selectedGroup) {
+                selectedGroup.classList.remove('hidden');
+                // Optional: Add simple fade-in effect
+                selectedGroup.animate([
+                    { opacity: 0, transform: 'translateY(10px)' },
+                    { opacity: 1, transform: 'translateY(0)' }
+                ], {
+                    duration: 300,
+                    easing: 'ease-out'
+                });
             }
         });
     });
-
 });
 
 
@@ -412,6 +473,118 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 noResultsMsg.classList.remove('hidden');
             }
+        });
+    }
+});
+
+//visity club//
+/**
+ * 1. Navigation Logic
+ */
+  function goBack() {
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                // fallback to home if there's no history
+                window.location.href = 'index.html';
+            }
+        }
+        window.goBack = goBack;
+
+
+/**
+ * 2. Modal Logic
+ */
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    const content = modal.querySelector('div[id^="modal-content"]');
+    
+    modal.classList.remove('hidden', 'pointer-events-none');
+    setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        content.classList.remove('scale-95');
+        content.classList.add('scale-100');
+    }, 10);
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    const content = modal.querySelector('div[id^="modal-content"]');
+    
+    modal.classList.add('opacity-0');
+    content.classList.remove('scale-100');
+    content.classList.add('scale-95');
+    setTimeout(() => {
+        modal.classList.add('hidden', 'pointer-events-none');
+        document.body.style.overflow = '';
+    }, 300);
+}
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+    if (event.target.id && event.target.id.includes('modal-')) {
+        closeModal(event.target.id);
+    }
+};
+
+/**
+ * 3. Animation & Slideshow Logic
+ */
+document.addEventListener("DOMContentLoaded", function() {
+    
+    // Scroll Animation Observer
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.card-animate').forEach(el => observer.observe(el));
+
+    // Image Sliders
+    const sliders = document.querySelectorAll('.image-slider');
+    sliders.forEach((slider) => {
+        const slides = slider.querySelectorAll('.slide-image');
+        let currentSlide = 0;
+        
+        if(slides.length > 1) {
+            setInterval(() => {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }, 4000); 
+        }
+    });
+    
+    // Event Search Logic
+    const searchInput = document.getElementById('event-search');
+    if(searchInput) {
+        searchInput.addEventListener('keyup', (e) => {
+            const term = e.target.value.toLowerCase();
+            document.querySelectorAll('.club-event').forEach(event => {
+                const text = event.innerText.toLowerCase();
+                event.style.display = text.includes(term) ? 'block' : 'none';
+            });
+        });
+    }
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobile-menu-toggle');
+    const drawer = document.getElementById('mobile-menu-drawer');
+    const overlay = document.getElementById('menu-overlay');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+
+    if (mobileBtn) {
+        mobileBtn.addEventListener('click', () => {
+            drawer.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+            iconOpen.classList.toggle('hidden');
+            iconClose.classList.toggle('hidden');
         });
     }
 });

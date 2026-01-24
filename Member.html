@@ -16,6 +16,7 @@
         /* Custom scrollbar for sidebar */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+        .glass { backdrop-filter: blur(4px); }
     </style>
 </head>
 
@@ -83,6 +84,9 @@
                     </button>
                     <button onclick="switchTab('training')" id="nav-training" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all text-left">
                         <i class="fa-solid fa-laptop-file w-5 text-center"></i> NeST Training
+                    </button>
+                    <button onclick="switchTab('classes')" id="nav-classes" class="nav-item w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all text-left">
+                        <i class="fa-solid fa-chalkboard-user w-5 text-center"></i> Classes
                     </button>
                 </nav>
             </div>
@@ -380,9 +384,10 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
                         <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition group">
-                            <div class="relative h-40 bg-slate-800 flex items-center justify-center cursor-pointer overflow-hidden" onclick="openVideoModal('How to Register as a Supplier')">
+                            <div class="relative h-40 bg-slate-800 flex items-center justify-center cursor-pointer overflow-hidden" 
+                                onclick="openVideoModal('How to Register as a Supplier', 'https://www.youtube.com/embed/xX6kOxZWc0M?autoplay=1')">
                                 <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition z-10"></div>
-                                <img src="https://img.youtube.com/vi/placeholder/hqdefault.jpg" class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Thumbnail">
+                                <img src="https://img.youtube.com/vi/xX6kOxZWc0M/hqdefault.jpg" class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Thumbnail">
                                 <i class="fa-solid fa-circle-play text-5xl text-white z-20 shadow-xl group-hover:scale-110 transition"></i>
                                 <span class="absolute bottom-2 right-2 bg-black/70 text-white text-[10px] px-1.5 rounded z-20">05:20</span>
                             </div>
@@ -392,14 +397,15 @@
                                 </div>
                                 <h3 class="font-bold text-slate-800 leading-tight mb-2">How to Register as a Supplier</h3>
                                 <p class="text-xs text-gray-500 mb-4">Step-by-step guide on creating a supplier account, uploading documents, and verification.</p>
-                                <button onclick="openVideoModal('How to Register as a Supplier')" class="w-full py-2 border border-slate-200 text-slate-700 text-sm font-bold rounded hover:bg-slate-50 transition">Watch Tutorial</button>
+                                <a href="https://youtu.be/xX6kOxZWc0M" target="_blank" class="block w-full text-center py-2 border border-slate-200 text-slate-700 text-sm font-bold rounded hover:bg-slate-50 transition">Watch Tutorial</a>
                             </div>
                         </div>
 
                         <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition group">
-                            <div class="relative h-40 bg-slate-800 flex items-center justify-center cursor-pointer overflow-hidden" onclick="openVideoModal('Register as Organization (PE)')">
+                            <div class="relative h-40 bg-slate-800 flex items-center justify-center cursor-pointer overflow-hidden" 
+                                onclick="openVideoModal('Register as Organization (PE)', 'https://www.youtube.com/embed/4bGw7sySgGg?autoplay=1')">
                                 <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition z-10"></div>
-                                <i class="fa-solid fa-building-columns text-5xl text-gray-400 opacity-20 absolute"></i>
+                                <img src="https://img.youtube.com/vi/4bGw7sySgGg/hqdefault.jpg" class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Thumbnail">
                                 <i class="fa-solid fa-circle-play text-5xl text-white z-20 shadow-xl group-hover:scale-110 transition"></i>
                                 <span class="absolute bottom-2 right-2 bg-black/70 text-white text-[10px] px-1.5 rounded z-20">08:15</span>
                             </div>
@@ -409,14 +415,15 @@
                                 </div>
                                 <h3 class="font-bold text-slate-800 leading-tight mb-2">Register as Organization (PE)</h3>
                                 <p class="text-xs text-gray-500 mb-4">For Procuring Entities: Setting up the organization profile and assigning user roles.</p>
-                                <button onclick="openVideoModal('Register as Organization (PE)')" class="w-full py-2 border border-slate-200 text-slate-700 text-sm font-bold rounded hover:bg-slate-50 transition">Watch Tutorial</button>
+                                <a href="https://youtu.be/4bGw7sySgGg" target="_blank" class="block w-full text-center py-2 border border-slate-200 text-slate-700 text-sm font-bold rounded hover:bg-slate-50 transition">Watch Tutorial</a>
                             </div>
                         </div>
 
                         <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition group">
-                            <div class="relative h-40 bg-slate-800 flex items-center justify-center cursor-pointer overflow-hidden" onclick="openVideoModal('How to Find Advertised Tenders')">
+                            <div class="relative h-40 bg-slate-800 flex items-center justify-center cursor-pointer overflow-hidden" 
+                                onclick="openVideoModal('How to Find Advertised Tenders', 'https://www.youtube.com/embed/sE0q1eGQhTw?autoplay=1')">
                                 <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition z-10"></div>
-                                <i class="fa-solid fa-magnifying-glass text-5xl text-gray-400 opacity-20 absolute"></i>
+                                <img src="https://img.youtube.com/vi/sE0q1eGQhTw/hqdefault.jpg" class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Thumbnail">
                                 <i class="fa-solid fa-circle-play text-5xl text-white z-20 shadow-xl group-hover:scale-110 transition"></i>
                                 <span class="absolute bottom-2 right-2 bg-black/70 text-white text-[10px] px-1.5 rounded z-20">03:45</span>
                             </div>
@@ -426,14 +433,15 @@
                                 </div>
                                 <h3 class="font-bold text-slate-800 leading-tight mb-2">How to Look for Tenders</h3>
                                 <p class="text-xs text-gray-500 mb-4">Learn to use search filters, categories, and notifications to find relevant opportunities.</p>
-                                <button onclick="openVideoModal('How to Find Advertised Tenders')" class="w-full py-2 border border-slate-200 text-slate-700 text-sm font-bold rounded hover:bg-slate-50 transition">Watch Tutorial</button>
+                                <a href="https://youtu.be/sE0q1eGQhTw" target="_blank" class="block w-full text-center py-2 border border-slate-200 text-slate-700 text-sm font-bold rounded hover:bg-slate-50 transition">Watch Tutorial</a>
                             </div>
                         </div>
 
-                        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition group">
-                            <div class="relative h-40 bg-slate-800 flex items-center justify-center cursor-pointer overflow-hidden" onclick="openVideoModal('How to Advertise a Tender')">
+                         <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition group">
+                            <div class="relative h-40 bg-slate-800 flex items-center justify-center cursor-pointer overflow-hidden" 
+                                onclick="openVideoModal('How to Advertise a Tender', 'https://www.youtube.com/embed/nGkdgN4X-QI?autoplay=1')">
                                 <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition z-10"></div>
-                                <i class="fa-solid fa-bullhorn text-5xl text-gray-400 opacity-20 absolute"></i>
+                                <img src="https://img.youtube.com/vi/nGkdgN4X-QI/hqdefault.jpg" class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Thumbnail">
                                 <i class="fa-solid fa-circle-play text-5xl text-white z-20 shadow-xl group-hover:scale-110 transition"></i>
                                 <span class="absolute bottom-2 right-2 bg-black/70 text-white text-[10px] px-1.5 rounded z-20">06:30</span>
                             </div>
@@ -443,14 +451,15 @@
                                 </div>
                                 <h3 class="font-bold text-slate-800 leading-tight mb-2">How to Advertise a Tender</h3>
                                 <p class="text-xs text-gray-500 mb-4">Creating a tender notice, uploading documents, and publishing to the public portal.</p>
-                                <button onclick="openVideoModal('How to Advertise a Tender')" class="w-full py-2 border border-slate-200 text-slate-700 text-sm font-bold rounded hover:bg-slate-50 transition">Watch Tutorial</button>
+                                <a href="https://youtu.be/nGkdgN4X-QI" target="_blank" class="block w-full text-center py-2 border border-slate-200 text-slate-700 text-sm font-bold rounded hover:bg-slate-50 transition">Watch Tutorial</a>
                             </div>
                         </div>
 
                         <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition group">
-                            <div class="relative h-40 bg-slate-800 flex items-center justify-center cursor-pointer overflow-hidden" onclick="openVideoModal('How to Open a Tender')">
+                            <div class="relative h-40 bg-slate-800 flex items-center justify-center cursor-pointer overflow-hidden" 
+                                onclick="openVideoModal('How to Open a Tender', 'https://www.youtube.com/embed/kKP_R1Xlcok?autoplay=1')">
                                 <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition z-10"></div>
-                                <i class="fa-solid fa-folder-open text-5xl text-gray-400 opacity-20 absolute"></i>
+                                <img src="https://img.youtube.com/vi/kKP_R1Xlcok/hqdefault.jpg" class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Thumbnail">
                                 <i class="fa-solid fa-circle-play text-5xl text-white z-20 shadow-xl group-hover:scale-110 transition"></i>
                                 <span class="absolute bottom-2 right-2 bg-black/70 text-white text-[10px] px-1.5 rounded z-20">04:10</span>
                             </div>
@@ -460,14 +469,15 @@
                                 </div>
                                 <h3 class="font-bold text-slate-800 leading-tight mb-2">How to Open a Tender</h3>
                                 <p class="text-xs text-gray-500 mb-4">Procedures for the tender opening ceremony, decrypting bids, and generating opening reports.</p>
-                                <button onclick="openVideoModal('How to Open a Tender')" class="w-full py-2 border border-slate-200 text-slate-700 text-sm font-bold rounded hover:bg-slate-50 transition">Watch Tutorial</button>
+                                <a href="https://youtu.be/kKP_R1Xlcok" target="_blank" class="block w-full text-center py-2 border border-slate-200 text-slate-700 text-sm font-bold rounded hover:bg-slate-50 transition">Watch Tutorial</a>
                             </div>
                         </div>
 
                         <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition group">
-                            <div class="relative h-40 bg-slate-800 flex items-center justify-center cursor-pointer overflow-hidden" onclick="openVideoModal('How to Evaluate a Tender')">
+                            <div class="relative h-40 bg-slate-800 flex items-center justify-center cursor-pointer overflow-hidden" 
+                                onclick="openVideoModal('How to Evaluate a Tender', 'https://www.youtube.com/embed/kKP_R1Xlcok?start=600&autoplay=1')">
                                 <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition z-10"></div>
-                                <i class="fa-solid fa-check-double text-5xl text-gray-400 opacity-20 absolute"></i>
+                                <img src="https://img.youtube.com/vi/kKP_R1Xlcok/hqdefault.jpg" class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Thumbnail">
                                 <i class="fa-solid fa-circle-play text-5xl text-white z-20 shadow-xl group-hover:scale-110 transition"></i>
                                 <span class="absolute bottom-2 right-2 bg-black/70 text-white text-[10px] px-1.5 rounded z-20">12:45</span>
                             </div>
@@ -477,7 +487,133 @@
                                 </div>
                                 <h3 class="font-bold text-slate-800 leading-tight mb-2">How to Evaluate a Tender</h3>
                                 <p class="text-xs text-gray-500 mb-4">Conducting technical and financial evaluations, scoring, and approval workflows.</p>
-                                <button onclick="openVideoModal('How to Evaluate a Tender')" class="w-full py-2 border border-slate-200 text-slate-700 text-sm font-bold rounded hover:bg-slate-50 transition">Watch Tutorial</button>
+                                <a href="https://youtu.be/kKP_R1Xlcok?t=600" target="_blank" class="block w-full text-center py-2 border border-slate-200 text-slate-700 text-sm font-bold rounded hover:bg-slate-50 transition">Watch Tutorial</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="view-classes" class="view-section hidden animate-fade-in">
+                    <div class="flex justify-between items-center mb-2">
+                        <h2 class="text-2xl font-bold text-gray-800">Professional Classes</h2>
+                        <span class="text-sm text-gray-500">Upgrade your skills with premium courses</span>
+                    </div>
+                    <div class="text-center py-4 bg-blue-50 rounded-lg mb-8 border border-blue-100">
+                        <p class="text-slate-600 font-medium">Jifunze na upate ujuzi kupitia kozi bora zaidi mtandaoni kwa kiswahili na kiingereza</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        
+                        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col group cursor-pointer" onclick="openCourseModal(1)">
+                            <div class="relative h-48 overflow-hidden bg-gray-200">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span class="bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wide">All Levels</span>
+                                </div>
+                                <img src="https://placehold.co/600x400/2563eb/ffffff?text=NeST+System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="NeST Course">
+                                <div class="absolute top-4 right-4">
+                                    <i class="fa-regular fa-bookmark text-white text-lg drop-shadow-md"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="p-6 flex-1 flex flex-col">
+                                <div class="flex text-amber-400 text-xs mb-3">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                                </div>
+                                
+                                <h3 class="text-lg font-bold text-slate-800 mb-3 leading-snug">Mastering NeST: E-Procurement from Beginner to Pro</h3>
+                                
+                                <div class="flex items-center gap-3 mb-6">
+                                    <div class="w-8 h-8 rounded-full bg-gray-200 overflow-hidden">
+                                        <img src="https://placehold.co/100x100/333/fff?text=IP" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="text-xs">
+                                        <p class="text-gray-400">By <span class="text-slate-700 font-bold">Inst. Procure</span></p>
+                                        <p class="text-gray-400 truncate w-32">In Procurement, Tech</p>
+                                    </div>
+                                </div>
+
+                                <div class="mt-auto flex justify-between items-center pt-4 border-t border-gray-100">
+                                    <div>
+                                        <span class="text-xs text-gray-400 line-through mr-1">Sh 150,000</span>
+                                        <span class="text-lg font-bold text-slate-900">Sh 80,000</span>
+                                    </div>
+                                    <button class="flex items-center gap-2 text-blue-600 border border-blue-600 px-4 py-1.5 rounded-lg text-sm font-bold hover:bg-blue-600 hover:text-white transition">
+                                        <i class="fa-solid fa-cart-shopping"></i> Enroll
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col group cursor-pointer" onclick="openCourseModal(2)">
+                            <div class="relative h-48 overflow-hidden bg-gray-200">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span class="bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wide">Intermediate</span>
+                                </div>
+                                <img src="https://placehold.co/600x400/e11d48/ffffff?text=Inventory+Mgt" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Inventory Course">
+                                <div class="absolute top-4 right-4">
+                                    <i class="fa-regular fa-bookmark text-white text-lg drop-shadow-md"></i>
+                                </div>
+                            </div>
+                            <div class="p-6 flex-1 flex flex-col">
+                                <div class="flex text-amber-400 text-xs mb-3">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-800 mb-3 leading-snug">Warehouse & Inventory Management Strategies</h3>
+                                <div class="flex items-center gap-3 mb-6">
+                                    <div class="w-8 h-8 rounded-full bg-gray-200 overflow-hidden">
+                                        <img src="https://placehold.co/100x100/333/fff?text=SC" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="text-xs">
+                                        <p class="text-gray-400">By <span class="text-slate-700 font-bold">SupplyChain Pro</span></p>
+                                        <p class="text-gray-400 truncate w-32">In Logistics, Stores</p>
+                                    </div>
+                                </div>
+                                <div class="mt-auto flex justify-between items-center pt-4 border-t border-gray-100">
+                                    <div>
+                                        <span class="text-xs text-gray-400 line-through mr-1">Sh 100,000</span>
+                                        <span class="text-lg font-bold text-slate-900">Sh 65,000</span>
+                                    </div>
+                                    <button class="flex items-center gap-2 text-blue-600 border border-blue-600 px-4 py-1.5 rounded-lg text-sm font-bold hover:bg-blue-600 hover:text-white transition">
+                                        <i class="fa-solid fa-cart-shopping"></i> Enroll
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col group cursor-pointer" onclick="openCourseModal(3)">
+                            <div class="relative h-48 overflow-hidden bg-gray-200">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span class="bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wide">Expert</span>
+                                </div>
+                                <img src="https://placehold.co/600x400/059669/ffffff?text=Procurement+Law" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Procurement Course">
+                                <div class="absolute top-4 right-4">
+                                    <i class="fa-regular fa-bookmark text-white text-lg drop-shadow-md"></i>
+                                </div>
+                            </div>
+                            <div class="p-6 flex-1 flex flex-col">
+                                <div class="flex text-amber-400 text-xs mb-3">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-800 mb-3 leading-snug">Public Procurement Act & Compliance 2026</h3>
+                                <div class="flex items-center gap-3 mb-6">
+                                    <div class="w-8 h-8 rounded-full bg-gray-200 overflow-hidden">
+                                        <img src="https://placehold.co/100x100/333/fff?text=LG" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="text-xs">
+                                        <p class="text-gray-400">By <span class="text-slate-700 font-bold">Legal Experts TZ</span></p>
+                                        <p class="text-gray-400 truncate w-32">In Law, Compliance</p>
+                                    </div>
+                                </div>
+                                <div class="mt-auto flex justify-between items-center pt-4 border-t border-gray-100">
+                                    <div>
+                                        <span class="text-xs text-gray-400 line-through mr-1">Sh 200,000</span>
+                                        <span class="text-lg font-bold text-slate-900">Sh 120,000</span>
+                                    </div>
+                                    <button class="flex items-center gap-2 text-blue-600 border border-blue-600 px-4 py-1.5 rounded-lg text-sm font-bold hover:bg-blue-600 hover:text-white transition">
+                                        <i class="fa-solid fa-cart-shopping"></i> Enroll
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
@@ -620,43 +756,134 @@
         </div>
     </div>
 
-<div id="videoModal" class="hidden fixed inset-0 z-[70] overflow-y-auto">
-    <div class="fixed inset-0 bg-black bg-opacity-95 transition-opacity" onclick="closeModal('videoModal')"></div>
-    
-    <div class="flex min-h-full items-center justify-center p-2 md:p-4">
-        <div id="videoModalContainer" class="relative bg-black rounded-xl shadow-2xl w-full max-w-4xl transition-all duration-500 ease-in-out border border-gray-800 flex flex-col">
-            
-            <div class="flex justify-between items-center p-4 border-b border-gray-800 bg-gray-900 rounded-t-xl">
-                <h3 class="text-lg font-bold text-white truncate pr-4" id="videoTitle">Tutorial Video</h3>
+    <div id="courseModal" class="hidden fixed inset-0 z-[70] overflow-y-auto">
+        <div class="fixed inset-0 bg-gray-900 bg-opacity-80 transition-opacity" onclick="closeModal('courseModal')"></div>
+        <div class="flex min-h-full items-center justify-center p-4">
+            <div class="relative bg-white rounded-2xl shadow-2xl w-full max-w-6xl modal-enter overflow-hidden flex flex-col h-[90vh]">
                 
-                <div class="flex items-center gap-3">
-                    <button onclick="toggleVideoSize()" class="hidden md:flex items-center gap-2 text-gray-400 hover:text-white bg-gray-800 hover:bg-gray-700 px-3 py-1.5 rounded-lg text-xs font-bold transition">
-                        <i id="resizeIcon" class="fa-solid fa-expand"></i>
-                        <span id="resizeText">Theater Mode</span>
-                    </button>
-
-                    <button onclick="closeModal('videoModal')" class="text-gray-400 hover:text-red-500 transition">
-                        <i class="fa-solid fa-xmark text-xl"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div id="videoPlayerWrapper" class="aspect-video bg-black flex items-center justify-center relative w-full">
-                
-                <div class="text-center">
-                    <i class="fa-brands fa-youtube text-red-600 text-6xl mb-4 animate-pulse"></i>
-                    <p class="text-gray-400">Loading Video Stream...</p>
-                </div>
-                
+                <div class="flex justify-between items-center px-6 py-4 border-b">
+                    <h3 class="font-bold text-lg text-gray-800" id="courseDetailTitle">Course Details</h3>
+                    <button onclick="closeModal('courseModal')" class="text-gray-400 hover:text-red-500 text-2xl"><i class="fa-solid fa-xmark"></i></button>
                 </div>
 
-            <div class="p-4 bg-gray-900 text-gray-400 text-xs flex justify-between rounded-b-xl border-t border-gray-800">
-                <span><i class="fa-solid fa-circle-info mr-2"></i> NeST System Training Series</span>
-                <button class="hover:text-white transition"><i class="fa-solid fa-share-nodes mr-1"></i> Share</button>
+                <div class="flex-1 overflow-y-auto bg-gray-50">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 p-6 md:p-8">
+                        
+                        <div class="lg:col-span-2 space-y-8">
+                            
+                            <div class="bg-black rounded-xl overflow-hidden aspect-video relative shadow-lg group">
+                                <iframe id="courseDetailVideo" class="w-full h-full" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+
+                            <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                                <h4 class="font-bold text-xl text-slate-900 mb-4">About Course</h4>
+                                <p id="courseDetailDesc" class="text-gray-600 leading-relaxed text-sm"></p>
+                            </div>
+
+                            <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                                <h4 class="font-bold text-xl text-slate-900 mb-4">What you'll learn?</h4>
+                                <ul id="courseDetailLearn" class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-600"></ul>
+                            </div>
+
+                            <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                                <h4 class="font-bold text-xl text-slate-900 mb-4">Course Content</h4>
+                                <div class="space-y-2">
+                                    <div class="border rounded-lg p-3 flex justify-between items-center bg-gray-50 cursor-pointer hover:bg-gray-100">
+                                        <div class="flex items-center gap-3">
+                                            <i class="fa-solid fa-circle-chevron-down text-blue-500"></i>
+                                            <span class="font-bold text-sm text-slate-700">1. Introduction to Module</span>
+                                        </div>
+                                        <span class="text-xs text-gray-400">15:00</span>
+                                    </div>
+                                    <div class="border rounded-lg p-3 flex justify-between items-center bg-white cursor-pointer hover:bg-gray-50">
+                                        <div class="flex items-center gap-3">
+                                            <i class="fa-regular fa-circle-play text-gray-400"></i>
+                                            <span class="font-medium text-sm text-gray-600">2. Key Concepts & Definitions</span>
+                                        </div>
+                                        <span class="text-xs text-gray-400">45:00</span>
+                                    </div>
+                                     <div class="border rounded-lg p-3 flex justify-between items-center bg-white cursor-pointer hover:bg-gray-50">
+                                        <div class="flex items-center gap-3">
+                                            <i class="fa-solid fa-lock text-gray-300"></i>
+                                            <span class="font-medium text-sm text-gray-600">3. Practical Application</span>
+                                        </div>
+                                        <span class="text-xs text-gray-400">1:20:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-1">
+                            <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-lg sticky top-6">
+                                <div class="mb-6">
+                                    <p class="text-sm text-gray-400 line-through mb-1" id="courseDetailOldPrice">Sh 000</p>
+                                    <h2 class="text-3xl font-extrabold text-slate-900" id="courseDetailPrice">Sh 000</h2>
+                                </div>
+
+                                <button class="w-full py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition shadow-md mb-6 flex justify-center items-center gap-2">
+                                    Enroll Now <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+
+                                <div class="space-y-4 mb-6 pb-6 border-b border-gray-100">
+                                    <div class="flex items-center gap-3 text-sm text-gray-600">
+                                        <i class="fa-solid fa-users text-gray-400 w-5"></i> <span id="courseDetailAudience">All Levels</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 text-sm text-gray-600">
+                                        <i class="fa-solid fa-clock text-gray-400 w-5"></i> <span>12 Hours Duration</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 text-sm text-gray-600">
+                                        <i class="fa-solid fa-certificate text-gray-400 w-5"></i> <span>Certificate of Completion</span>
+                                    </div>
+                                </div>
+
+                                <div class="mb-6">
+                                    <h5 class="font-bold text-slate-800 text-sm mb-3">Target Audience</h5>
+                                    <ul class="text-xs text-gray-500 list-disc pl-4 space-y-1" id="courseDetailAudienceList">
+                                        <li>Procurement Officers</li>
+                                        <li>Suppliers & Bidders</li>
+                                        <li>Store Managers</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <h5 class="font-bold text-slate-800 text-sm mb-3">Tags</h5>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 bg-gray-100 text-gray-500 text-[10px] rounded border">Procurement</span>
+                                        <span class="px-2 py-1 bg-gray-100 text-gray-500 text-[10px] rounded border">NeST</span>
+                                        <span class="px-2 py-1 bg-gray-100 text-gray-500 text-[10px] rounded border">Logistics</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+    <div id="videoModal" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true" onclick="closeVideoModal()"></div>
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+            <div class="relative inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 flex justify-between items-center border-b border-gray-200">
+                    <h3 class="text-lg leading-6 font-medium text-gray-900" id="modalVideoTitle">
+                        Training Video
+                    </h3>
+                    <button type="button" class="text-gray-400 hover:text-gray-500 focus:outline-none" onclick="closeVideoModal()">
+                        <span class="sr-only">Close</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="bg-black aspect-video w-full relative">
+                    <iframe id="modalVideoFrame" class="absolute inset-0 w-full h-full" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         // Sidebar Toggle
@@ -694,7 +921,72 @@
             window.location.href = "login.html"; 
         }
 
-        // --- MODAL & PAYMENT LOGIC ---
+        // --- COURSES DATA & LOGIC ---
+        const courses = {
+            1: {
+                title: "Mastering NeST: E-Procurement from Beginner to Pro",
+                desc: "This comprehensive course covers the National e-Procurement System of Tanzania (NeST) in depth. Designed for both suppliers and procuring entities, you will learn how to navigate the dashboard, submit bids electronically, manage contracts, and ensure compliance with the latest public procurement regulations. Features live simulations of the NeST portal.",
+                videoUrl: "https://www.youtube.com/embed/xX6kOxZWc0M?autoplay=1",
+                learn: [
+                    "<li>How to register and verify your account on NeST</li>",
+                    "<li>Uploading legal documents and certifications</li>",
+                    "<li>Searching and applying for tenders effectively</li>",
+                    "<li>Understanding the e-Auction process</li>"
+                ],
+                price: "Sh 80,000",
+                oldPrice: "Sh 150,000",
+                audience: "Suppliers & Officers",
+                audienceList: "<li>Procurement Officers</li><li>Suppliers/Bidders</li><li>Government Officials</li>"
+            },
+            2: {
+                title: "Warehouse & Inventory Management Strategies",
+                desc: "Efficient store keeping is the backbone of any supply chain. This course teaches modern techniques for stock control, warehouse layout optimization, FIFO/LIFO methods, and loss prevention. Perfect for storekeepers looking to upgrade their skills.",
+                videoUrl: "https://www.youtube.com/embed/sE0q1eGQhTw?autoplay=1",
+                learn: [
+                    "<li>Stock taking and reconciliation techniques</li>",
+                    "<li>Warehouse safety and layout optimization</li>",
+                    "<li>Using digital tools for inventory tracking</li>",
+                    "<li>Reducing stock-outs and overstocking</li>"
+                ],
+                price: "Sh 65,000",
+                oldPrice: "Sh 100,000",
+                audience: "Storekeepers",
+                audienceList: "<li>Store Keepers</li><li>Logistics Managers</li><li>Inventory Clerks</li>"
+            },
+            3: {
+                title: "Public Procurement Act & Compliance 2026",
+                desc: "Stay ahead of legal risks with this specialized course on the Tanzania Public Procurement Act. Understand the legal frameworks, ethical considerations, and how to avoid common pitfalls during the tendering process. Essential for compliance officers.",
+                videoUrl: "https://www.youtube.com/embed/nGkdgN4X-QI?autoplay=1",
+                learn: [
+                    "<li>Deep dive into the Public Procurement Act</li>",
+                    "<li>Understanding evaluation criteria</li>",
+                    "<li>Dispute resolution and appeals</li>",
+                    "<li>Ethical standards in procurement</li>"
+                ],
+                price: "Sh 120,000",
+                oldPrice: "Sh 200,000",
+                audience: "Legal & Compliance",
+                audienceList: "<li>Legal Officers</li><li>Procurement Managers</li><li>Compliance Auditors</li>"
+            }
+        };
+
+        function openCourseModal(courseId) {
+            const course = courses[courseId];
+            if (!course) return;
+
+            document.getElementById('courseDetailTitle').innerText = course.title;
+            document.getElementById('courseDetailVideo').src = course.videoUrl;
+            document.getElementById('courseDetailDesc').innerText = course.desc;
+            document.getElementById('courseDetailLearn').innerHTML = course.learn.join('');
+            document.getElementById('courseDetailPrice').innerText = course.price;
+            document.getElementById('courseDetailOldPrice').innerText = course.oldPrice;
+            document.getElementById('courseDetailAudience').innerText = course.audience;
+            document.getElementById('courseDetailAudienceList').innerHTML = course.audienceList;
+
+            document.getElementById('courseModal').classList.remove('hidden');
+        }
+
+        // --- GENERIC MODAL LOGIC ---
 
         function openEventModal(eventName) {
             document.getElementById('eventInputName').value = eventName;
@@ -714,6 +1006,9 @@
 
         function closeModal(modalId) {
             document.getElementById(modalId).classList.add('hidden');
+            if(modalId === 'courseModal'){
+                document.getElementById('courseDetailVideo').src = "";
+            }
         }
 
         function togglePaymentMethod(method) {
@@ -747,49 +1042,59 @@
             switchTab('dashboard'); 
         });
 
-// NEST VIDEO SIZE//
-let isFullSize = false;
+        // NeST VIDEO SIZE//
+        let isFullSize = false;
 
-function toggleVideoSize() {
-    const container = document.getElementById('videoModalContainer');
-    const icon = document.getElementById('resizeIcon');
-    const text = document.getElementById('resizeText');
+        function toggleVideoSize() {
+            const container = document.getElementById('videoModalContainer');
+            const icon = document.getElementById('resizeIcon');
+            const text = document.getElementById('resizeText');
 
-    if (!isFullSize) {
-        // Switch to FULL SIZE
-        container.classList.remove('max-w-4xl'); // Remove Mid size
-        container.classList.add('max-w-[95%]', 'h-[90vh]'); // Add Full size (almost full screen)
-        
-        // Update Icon/Text
-        icon.classList.remove('fa-expand');
-        icon.classList.add('fa-compress');
-        text.innerText = "Exit Theater";
-        
-        isFullSize = true;
-    } else {
-        // Switch back to MID SIZE
-        container.classList.remove('max-w-[95%]', 'h-[90vh]'); // Remove Full size
-        container.classList.add('max-w-4xl'); // Add Mid size
-        
-        // Update Icon/Text
-        icon.classList.remove('fa-compress');
-        icon.classList.add('fa-expand');
-        text.innerText = "Theater Mode";
-        
-        isFullSize = false;
-    }
-}
+            if (!isFullSize) {
+                container.classList.remove('max-w-4xl'); 
+                container.classList.add('max-w-[95%]', 'h-[90vh]'); 
+                
+                icon.classList.remove('fa-expand');
+                icon.classList.add('fa-compress');
+                text.innerText = "Exit Theater";
+                
+                isFullSize = true;
+            } else {
+                container.classList.remove('max-w-[95%]', 'h-[90vh]'); 
+                container.classList.add('max-w-4xl'); 
+                
+                icon.classList.remove('fa-compress');
+                icon.classList.add('fa-expand');
+                text.innerText = "Theater Mode";
+                
+                isFullSize = false;
+            }
+        }
 
-// Update the existing openVideoModal function to reset size when opening
-function openVideoModal(title) {
-    document.getElementById('videoTitle').innerText = title;
-    
-    // Reset to mid size every time we open a new video
-    isFullSize = true; // Set true so the toggle function flips it to false (default)
-    toggleVideoSize(); 
-    
-    document.getElementById('videoModal').classList.remove('hidden');
-}
+        function openVideoModal(title, videoUrl) {
+            const modal = document.getElementById('videoModal');
+            document.getElementById('modalVideoTitle').textContent = title;
+            document.getElementById('modalVideoFrame').src = videoUrl;
+            modal.classList.remove('hidden');
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const modalFrame = document.getElementById('modalVideoFrame');
+            modal.classList.add('hidden');
+            modalFrame.src = "";
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeVideoModal();
+                closeModal('courseModal');
+                closeModal('eventModal');
+                closeModal('jobModal');
+                closeModal('paymentModal');
+            }
+        });
+
     </script>
 </body>
 </html>

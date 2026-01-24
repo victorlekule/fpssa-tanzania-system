@@ -6,12 +6,22 @@
     <title>FPSSA</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    
     <link rel="stylesheet" href="style.css">
-   
+    <style>
+        /* Active Tab Style */
+        .active-tab {
+            background-color: #059669 !important; /* emerald-600 */
+            color: white !important;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100 font-sans">
-<!-- Header -->
+
 <header id="main-header" class="shadow-lg fixed top-0 left-0 w-full z-50 bg-white">
         <div class="bg-white py-4 md:py-8">
             <div class="container mx-auto px-4 md:px-6 flex items-center justify-between relative">
@@ -88,11 +98,6 @@
         </div>
     </div>
     <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden glass"></div>
-
- <!--  end of Header -->
-
-
-<!-- Main Content -->
 <section class="bg-white py-16 mb-12 shadow-sm relative pt-48 overflow-hidden">
     <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" style="background-image: radial-gradient(#10b981 0.5px, transparent 0.5px); background-size: 20px 20px;"></div>
     
@@ -110,7 +115,7 @@
 <section class="py-12 bg-slate-50" id="gallery-section">
     <div class="container mx-auto px-6">
 
-        <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12">
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12" id="gallery-tabs">
             <button data-year="2025" class="gallery-tab px-6 py-3 rounded-full text-lg font-semibold transition-all duration-300 bg-emerald-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active-tab">2025</button>
             <button data-year="2024" class="gallery-tab px-6 py-3 rounded-full text-lg font-semibold transition-all duration-300 bg-white text-gray-700 hover:bg-gray-100 shadow-sm hover:shadow-md hover:-translate-y-0.5">2024</button>
             <button data-year="2023" class="gallery-tab px-6 py-3 rounded-full text-lg font-semibold transition-all duration-300 bg-white text-gray-700 hover:bg-gray-100 shadow-sm hover:shadow-md hover:-translate-y-0.5">2023</button>
@@ -320,7 +325,7 @@
                         </div>
                     </div>
                 </a>
-                 <a href="IMG/2023(3).jpeg" data-fancybox="gallery-2023" class="group relative block rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-zoom-in h-80">
+                <a href="IMG/2023(3).jpeg" data-fancybox="gallery-2023" class="group relative block rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-zoom-in h-80">
                     <img src="IMG/2023(3).jpeg" alt="Event" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     
@@ -333,7 +338,7 @@
                         </div>
                     </div>
                 </a>
-                 <a href="IMG/2023(4).jpeg" data-fancybox="gallery-2023" class="group relative block rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-zoom-in h-80">
+                <a href="IMG/2023(4).jpeg" data-fancybox="gallery-2023" class="group relative block rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-zoom-in h-80">
                     <img src="IMG/2023(4).jpeg" alt="Event" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     
@@ -346,7 +351,7 @@
                         </div>
                     </div>
                 </a>
-                 <a href="IMG/2023(5).jpeg" data-fancybox="gallery-2023" class="group relative block rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-zoom-in h-80">
+                <a href="IMG/2023(5).jpeg" data-fancybox="gallery-2023" class="group relative block rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-zoom-in h-80">
                     <img src="IMG/2023(5).jpeg" alt="Event" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     
@@ -493,10 +498,7 @@
         </div>
     </div>
 </section>
-   
 
-
-        <!-- Footer -->
 <footer class="bg-[#0f172a] text-gray-400 py-12 lg:py-16 font-sans text-sm overflow-hidden">
     <div class="container mx-auto px-4 lg:px-6 reveal-on-scroll">
         
@@ -515,7 +517,7 @@
                     <li><a href="index.html" class="hover:text-emerald-400 hover:translate-x-1 transition-all duration-300 block py-0.5">Home</a></li>
                     <li><a href="about.html" class="hover:text-emerald-400 hover:translate-x-1 transition-all duration-300 block py-0.5">About Us</a></li>
                     <li><a href="services.html" class="hover:text-emerald-400 hover:translate-x-1 transition-all duration-300 block py-0.5">Our Services</a></li>
-                    <li><a href="club.html" class="hover:text-emerald-400 hover:translate-x-1 transition-all duration-300 block py-0.5">Student Club</a></li>
+                    <li><a href="club.html" class="hover:text-emerald-400 hover:translate-x-1 transition-all duration-300 block py-0.5">Student Clubs</a></li>
                     <li><a href="contact.html" class="hover:text-emerald-400 hover:translate-x-1 transition-all duration-300 block py-0.5">Contact</a></li>
                 </ul>
             </div>
@@ -523,11 +525,11 @@
             <div class="col-span-1">
                 <h3 class="text-base lg:text-lg font-bold text-white mb-4">Relevant Links</h3>
                 <ul class="space-y-1.5">
-                    <li><a href="#" class="hover:text-emerald-400 hover:translate-x-1 transition-all duration-300 flex items-center py-0.5"><i class="fa-solid fa-link mr-2 text-xs"></i> PSPTB</a></li>
-                    <li><a href="#" class="hover:text-emerald-400 hover:translate-x-1 transition-all duration-300 flex items-center py-0.5"><i class="fa-solid fa-link mr-2 text-xs"></i> PPRA</a></li>
-                    <li><a href="#" class="hover:text-emerald-400 hover:translate-x-1 transition-all duration-300 flex items-center py-0.5"><i class="fa-solid fa-link mr-2 text-xs"></i> GPSA</a></li>
-                    <li><a href="#" class="hover:text-emerald-400 hover:translate-x-1 transition-all duration-300 flex items-center py-0.5"><i class="fa-solid fa-link mr-2 text-xs"></i> PCCB</a></li>
-                    <li><a href="#" class="hover:text-emerald-400 hover:translate-x-1 transition-all duration-300 flex items-center py-0.5"><i class="fa-solid fa-link mr-2 text-xs"></i> PPA</a></li>
+                    <li><a href="https://registration.psptb.go.tz" class="hover:text-emerald-400 hover:translate-x-1 transition-all duration-300 flex items-center py-0.5"><i class="fa-solid fa-link mr-2 text-xs"></i> PSPTB</a></li>
+                    <li><a href="https://www.ppra.go.tz" class="hover:text-emerald-400 hover:translate-x-1 transition-all duration-300 flex items-center py-0.5"><i class="fa-solid fa-link mr-2 text-xs"></i> PPRA</a></li>
+                    <li><a href="https://www.gpsa.go.tz" class="hover:text-emerald-400 hover:translate-x-1 transition-all duration-300 flex items-center py-0.5"><i class="fa-solid fa-link mr-2 text-xs"></i> GPSA</a></li>
+                    <li><a href="https://www.ppaa.go.tz/" class="hover:text-emerald-400 hover:translate-x-1 transition-all duration-300 flex items-center py-0.5"><i class="fa-solid fa-link mr-2 text-xs"></i> PPAA</a></li>
+                    <li><a href="https://training.nest.go.tz/" class="hover:text-emerald-400 hover:translate-x-1 transition-all duration-300 flex items-center py-0.5"><i class="fa-solid fa-link mr-2 text-xs"></i> NeST</a></li>
                     
                 </ul>
             </div>
@@ -537,22 +539,22 @@
                 
                 <div class="flex flex-row lg:flex-col gap-5 lg:gap-2 flex-wrap">
                     
-                    <a href="#" class="flex items-center gap-2 hover:text-emerald-400 transition-all duration-300 group">
+                    <a href="https://www.instagram.com/fpssatanzania?igsh=MTQwbDMwY2N0azJiYQ==" class="flex items-center gap-2 hover:text-emerald-400 transition-all duration-300 group">
                         <i class="fa-brands fa-instagram text-2xl lg:text-lg lg:w-5 transform group-hover:scale-110 transition-transform"></i> 
                         <span class="hidden lg:inline group-hover:translate-x-1 transition-transform">Instagram</span>
                     </a>
                     
-                    <a href="#" class="flex items-center gap-2 hover:text-emerald-400 transition-all duration-300 group">
+                    <a href="https://www.instagram.com/fpssatanzania?igsh=MTQwbDMwY2N0azJiYQ==" class="flex items-center gap-2 hover:text-emerald-400 transition-all duration-300 group">
                         <i class="fa-brands fa-x-twitter text-2xl lg:text-lg lg:w-5 transform group-hover:scale-110 transition-transform"></i> 
                         <span class="hidden lg:inline group-hover:translate-x-1 transition-transform">X (Twitter)</span>
                     </a>
                     
-                    <a href="#" class="flex items-center gap-2 hover:text-emerald-400 transition-all duration-300 group">
+                    <a href="https://www.instagram.com/fpssatanzania?igsh=MTQwbDMwY2N0azJiYQ==" class="flex items-center gap-2 hover:text-emerald-400 transition-all duration-300 group">
                         <i class="fa-brands fa-linkedin text-2xl lg:text-lg lg:w-5 transform group-hover:scale-110 transition-transform"></i> 
                         <span class="hidden lg:inline group-hover:translate-x-1 transition-transform">LinkedIn</span>
                     </a>
 
-                    <a href="#" class="flex items-center gap-2 hover:text-emerald-400 transition-all duration-300 group">
+                    <a href="https://www.instagram.com/fpssatanzania?igsh=MTQwbDMwY2N0azJiYQ==" class="flex items-center gap-2 hover:text-emerald-400 transition-all duration-300 group">
                         <i class="fa-brands fa-tiktok text-2xl lg:text-lg lg:w-5 transform group-hover:scale-110 transition-transform"></i> 
                         <span class="hidden lg:inline group-hover:translate-x-1 transition-transform">TikTok</span>
                     </a>
@@ -607,8 +609,8 @@
     </div>
 </footer>    
   
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    
     <script src="script.js"></script>
-
-   
 </body>
 </html>
